@@ -4,7 +4,6 @@ import plugins  from 'gulp-load-plugins';
 import yargs    from 'yargs';
 import browser  from 'browser-sync';
 import gulp     from 'gulp';
-import panini   from 'panini';
 import jade	    from 'gulp-jade';
 import rimraf   from 'rimraf';
 import sherpa   from 'style-sherpa';
@@ -48,7 +47,7 @@ function copy() {
 
 // Copy page templates into finished HTML files
 function pages() {
-  return gulp.src('src/pages/*.jade')
+  return gulp.src('src/pages/**/*.jade')
     .pipe(jade({
       client: false,
     }))
@@ -132,9 +131,6 @@ function watch() {
   gulp.watch(PATHS.assets, copy);
   gulp.watch('src/pages/**/*.jade').on('all', gulp.series(pages, browser.reload));
   gulp.watch('src/{layouts,partials}/**/*.jade').on('all', gulp.series(resetPages, pages, browser.reload));
-  
-  //gulp.watch('src/pages/**/*.html').on('all', gulp.series(pages, browser.reload));
-  //gulp.watch('src/{layouts,partials}/**/*.html').on('all', gulp.series(resetPages, pages, browser.reload));
   gulp.watch('src/assets/scss/**/*.scss').on('all', sass);
   gulp.watch('src/assets/js/**/*.js').on('all', gulp.series(javascript, browser.reload));
   gulp.watch('src/assets/img/**/*').on('all', gulp.series(images, browser.reload));

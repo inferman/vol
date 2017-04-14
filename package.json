@@ -1,7 +1,7 @@
 {
-  "name": "foundation-zurb-template",
+  "name": "foundation-gulp-starter",
   "version": "1.0.0",
-  "description": "Official ZURB Template for Foundation for Sites.",
+  "description": "Template for Foundation for Sites and Jade.",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",
@@ -22,13 +22,13 @@
     "gulp-extname": "^0.2.0",
     "gulp-if": "^2.0.0",
     "gulp-imagemin": "^2.2.1",
+    "gulp-jade": "^1.1.0",
     "gulp-load-plugins": "^1.1.0",
     "gulp-sass": "^2.1.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.2.0",
     "gulp-uncss": "^1.0.1",
     "js-yaml": "^3.4.6",
-    "panini": "^1.3.0",
     "rimraf": "^2.4.3",
     "style-sherpa": "^1.0.0",
     "yargs": "^3.8.0"
@@ -42,7 +42,9 @@
     "email": "foundation@zurb.com"
   },
   "babel": {
-    "presets": ["es2015"]
+    "presets": [
+      "es2015"
+    ]
   },
   "private": true
 }
