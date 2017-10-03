@@ -1,0 +1,47 @@
+footer
+  -
+    var objOfLinks = {
+      "about": [
+        "Главная",
+        "О нас",
+        "Новости",
+        "Статьи"
+      ],
+        "info": [
+        "Оплата и доставка",
+        "Гарантия",
+        "Размеры"
+      ]
+    };
+  section.footer_main-section
+    .row.align-middle
+      .column.small-3
+        .footer_logo
+          .img-holder
+            img(src="../assets/img/Logo_footer.png")
+            h1.footer_logo_heading
+              | интернет-магазин спортивной экипировки <br>и аксессуаров
+      .column.small-5
+        input(type="text").footer_input
+      .column.small-4.footer_btn-holder.align-self-stretch.col-collapse
+        button(type="button").btn.btn--grey
+          | Подписаться
+      .column.small-2.large-offset-3.footer_links.align-self-top
+        h3 О магазине
+        nav.footer_nav
+          ul.ul.ul--untitl
+            each art in objOfLinks.about
+              li
+                a(href="#") #{art}
+      .column.small-3.footer_links.align-self-top
+        h3 Информация
+        nav.footer_nav
+          ul.ul.ul--untitl
+            each info in objOfLinks.info
+              li
+                a(href="#") #{info}
+      .column.small-4.footer_links.align-self-top.col-collapse
+        h3 Контакты
+
+
+
