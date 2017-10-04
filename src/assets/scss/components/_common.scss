@@ -1,0 +1,28 @@
+.ul {
+  &--untitl {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    line-height: 1;
+  }
+}
+
+.col-collapse {
+  &--large {
+    @include breakpoint(large) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+button { cursor: pointer; }
+
+input {
+  border: 1px solid $border-color;
+  &:focus {
+    outline: none;
+  }
+}
