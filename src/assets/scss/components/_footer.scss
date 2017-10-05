@@ -45,17 +45,6 @@ $col-margin-bottom: 25px;
     }
   }
 }
-.btn {
-  flex: 0 0 auto;
-  font-size: rem-calc(18);
-  padding: 12px 25px;
-  &--grey {
-    @include transition(background);
-    background: $medium-gray;
-    color: $white;
-    &:hover { background: $hover-color; }
-  }
-}
 .footer_input {
   padding: 18px;
   width: 100%;
@@ -70,6 +59,10 @@ $col-margin-bottom: 25px;
 }
 .footer_contacts {
   @include breakpoint(small only) { text-align: center; }
+  .btn {
+    font-size: 1rem;
+    margin-bottom: rem-calc(18);
+  }
 }
 .footer_nav {
   font-size: 16px;
@@ -88,3 +81,31 @@ $col-margin-bottom: 25px;
   }
 }
 
+.footer_contacts_tel-holder {
+  padding-left: rem-calc(30);
+  position: relative;
+  margin-bottom: rem-calc(15);
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+  }
+  a {
+    display: block;
+    line-height: 1;
+    margin-bottom: rem-calc(8);
+  }
+}
+
+.footer_email {
+  display: block;
+  padding-left: rem-calc(35);
+  position: relative;
+  img {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

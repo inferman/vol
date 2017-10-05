@@ -20,6 +20,22 @@
 
 button { cursor: pointer; }
 
+.btn {
+  flex: 0 0 auto;
+  font-size: rem-calc(18);
+  padding: 12px 25px;
+  &--grey {
+    @include transition(background);
+    background: $medium-gray;
+    color: $white;
+    &:hover { background: $hover-color; }
+  }
+  &--green {
+    background: $green;
+    color: $white;
+  }
+}
+
 input {
   border: 1px solid $border-color;
   &:focus {
