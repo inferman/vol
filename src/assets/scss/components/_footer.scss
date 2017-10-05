@@ -16,12 +16,17 @@ $col-margin-bottom: 25px;
 }
 .footer_logo {
   position: relative;
-  .img-holder {
-    max-width: 210px;
-  }
   @include breakpoint(small only) {
     display: flex;
     justify-content: center;
+  }
+  .img-holder {
+    max-width: 250px;
+    text-align: center;
+    @include breakpoint(large) {
+      max-width: 210px;
+      text-align: left;
+    }
   }
 }
 .footer_logo_heading {
@@ -34,6 +39,10 @@ $col-margin-bottom: 25px;
     top: calc(100% + #{$col-margin-bottom} + 3px);
     width: 200px;
   }
+  @include breakpoint(medium down) {
+    font-size: rem-calc(20);
+    width: 250px;
+  }
 }
 
 .footer_btn-holder {
@@ -42,11 +51,15 @@ $col-margin-bottom: 25px;
     @include breakpoint(medium down) {
       flex: 0 0 100%;
       max-width: 100%;
+      padding: {
+        top: 16px;
+        bottom: 16px;
+      };
     }
   }
 }
 .footer_input {
-  padding: 18px;
+  padding: rem-calc(15) rem-calc(18);
   width: 100%;
   @include breakpoint(large) { min-width: 470px; }
   @include breakpoint(medium down) { margin-bottom: $col-margin-bottom; }
@@ -128,7 +141,14 @@ $col-margin-bottom: 25px;
   @include breakpoint(large only) {
     > .row { justify-content: space-between; }
   }
+  .copyright-block {
+    @include breakpoint(small only) { order: 2; }
+  }
   .soc-block {
+    @include breakpoint(small only) {
+      margin-bottom: 1rem;
+      order: 1;
+    }
     @include breakpoint(medium down) { text-align: center; }
     @include breakpoint(large) {
       align-items: center;
@@ -147,7 +167,12 @@ $col-margin-bottom: 25px;
   h4 {
     margin: 0;
     @include breakpoint(medium down) {
+      font-size: 1rem;
+      max-width: 170px;
       text-align: center;
+    }
+    @include breakpoint(small only) {
+      margin: 0 auto;
     }
   }
   h5 {

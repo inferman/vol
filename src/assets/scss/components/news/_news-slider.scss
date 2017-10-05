@@ -1,0 +1,33 @@
+.news_section {
+  padding: rem-calc(40) 0 rem-calc(70);
+}
+
+.news_slider {
+  position: relative;
+  .slick {
+    &-list { overflow: hidden; }
+    &-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &-prev { right: 100%; }
+    &-next { left: 100%; }
+  }
+  img { width: 100%; }
+}
+.news_slide {
+  float: left;
+  margin: 0 35px;
+  &_date {
+    color: #777;
+    font-size: rem-calc(14);
+    font-weight: 300;
+  }
+  &_link {
+    @include transition(color);
+    color: #606060;
+    &:hover { color: $green; }
+  }
+}
+.news_slide_date {}
