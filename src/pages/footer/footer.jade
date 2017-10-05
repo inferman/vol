@@ -15,7 +15,7 @@ footer
           .column.large-expand.small-12.footer_btn-holder.align-self-stretch.col-collapse.col-collapse--large
             button(type="button").btn.btn--grey
               | Подписаться
-      .column.large-2.small-6.medium-4.large-offset-3.footer_links.align-self-top
+      .column.large-2.small-6.medium-3.large-offset-3.footer_links.align-self-top
         h3 О магазине
         nav.footer_nav
           ul.ul.ul--untitl
@@ -29,7 +29,7 @@ footer
             each info in objOfLinks.info
               li
                 a(href="#") #{info}
-      .column.medium-4.footer_links.footer_contacts.align-self-top.col-collapse.col-collapse--large
+      .column.large-4.medium-5.footer_links.footer_contacts.align-self-top.col-collapse.col-collapse--large
         h3 Контакты
         .footer_contacts_tel-holder
           img(src="../../assets/img/footer/mobile_icon.png")
@@ -37,9 +37,23 @@ footer
           a(href="tel:0999238189") 099 923 81 89
         button(type="button").btn.btn--green
           | Обратный звонок
-        a(href="mailto:zakaz@volleymag.com.ua").footer_email
-          img(src="../../assets/img/footer/email_icon.png")
-          | zakaz@volleymag.com.ua
+        .flex-holder
+          a(href="mailto:zakaz@volleymag.com.ua").footer_email
+            img(src="../../assets/img/footer/email_icon.png")
+            | zakaz@volleymag.com.ua
+
+  section.footer_social-section
+    .row.align-middle
+      .column.xlarge-8.large-7.small-6
+        h4 volleymag 2012-2017. All rigth recerved.
+      .column.small-6.soc-block
+        h5 Наши сообщества в:
+        ul.ul.ul--untitl
+          each soc in socialsList
+            li
+              a(href="#{soc.link}")
+                img(src="../../assets/img/footer/#{soc.icon}.png")
+
 
 
 

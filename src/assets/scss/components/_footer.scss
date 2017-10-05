@@ -63,6 +63,12 @@ $col-margin-bottom: 25px;
     font-size: 1rem;
     margin-bottom: rem-calc(18);
   }
+  .flex-holder {
+    @include breakpoint(small only) {
+      display: flex;
+      justify-content: center;
+    }
+  }
 }
 .footer_nav {
   font-size: 16px;
@@ -85,6 +91,8 @@ $col-margin-bottom: 25px;
   padding-left: rem-calc(30);
   position: relative;
   margin-bottom: rem-calc(15);
+  max-width: 135px;
+  @include breakpoint(small only) { margin: 0 auto rem-calc(15); }
   img {
     position: absolute;
     left: 0;
@@ -107,5 +115,43 @@ $col-margin-bottom: 25px;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+  }
+}
+
+.footer_social-section {
+  background: $medium-gray;
+  color: $white;
+  padding: {
+    top: 14px;
+    bottom: 14px;
+  };
+  @include breakpoint(large only) {
+    > .row { justify-content: space-between; }
+  }
+  .soc-block {
+    @include breakpoint(medium down) { text-align: center; }
+    @include breakpoint(large) {
+      align-items: center;
+      display: flex;
+      flex: 0 0 auto;
+      max-width: 100%;
+    }
+    @include breakpoint(xlarge) { padding: 0; }
+  }
+  .ul {
+    align-items: center;
+    display: flex;
+    @include breakpoint(medium down) { justify-content: center; }
+  }
+  li + li { margin-left: rem-calc(36); }
+  h4 {
+    margin: 0;
+    @include breakpoint(medium down) {
+      text-align: center;
+    }
+  }
+  h5 {
+    @include breakpoint(medium) { margin: 0 0 rem-calc(18) 0; }
+    @include breakpoint(large) { margin: 0 rem-calc(40) 0 0; }
   }
 }
