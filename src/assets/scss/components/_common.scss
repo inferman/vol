@@ -1,3 +1,11 @@
+.wrapper {
+  @include sizes($width:100%, $height:100vh);
+  display: flex;
+  flex-direction: column;
+}
+.main-header, .main-footer { flex: 0 0 auto; }
+.main-content-wrapper { flex: 1 0 auto; }
+
 .ul {
   &--untitl {
     list-style-type: none;

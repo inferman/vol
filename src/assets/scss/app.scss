@@ -55,6 +55,7 @@
 
 @import 'mixins/mixins';
 @import 'components/common';
+@import 'components/header';
 @import 'components/footer';
-@import 'components/news/news-slider';
-@import 'components/features/features';
+@import 'components/main-page/news/news-slider';
+@import 'components/main-page/features/features';
