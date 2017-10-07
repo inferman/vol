@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
   }
+  &--inline { display: flex; }
   li {
     line-height: 1;
   }
@@ -32,6 +33,10 @@ button { cursor: pointer; }
   }
   &--green {
     background: $green;
+    color: $white;
+  }
+  &--blue {
+    background: $blue;
     color: $white;
   }
 }

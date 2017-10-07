@@ -1,33 +1,112 @@
-.news_section {
+.media_section {
   padding: rem-calc(40) 0 rem-calc(70);
 }
 
-.news_slider {
+.my-slider {
   position: relative;
+  padding: 0 rem-calc(100);
+  margin: 0 auto;
   .slick {
-    &-list { overflow: hidden; }
-    &-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
+    &-list {
+      margin: 0 rem-calc(-35);
     }
-    &-prev { right: 100%; }
-    &-next { left: 100%; }
+    &-arrow {
+      @include sizes(40px, 75px);
+      position: absolute;
+      top: 70px;
+      transform: none;
+    }
+    &-next, &-prev {
+      &:before { content: none; }
+    }
+    &-prev { left: 0; }
+    &-next { right: 0; }
   }
-  img { width: 100%; }
+  .slide-img { width: 100%; }
 }
+.slider_arrow-img {
+  @include transition(opacity, visibility);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  &--hover {
+    visibility: hidden;
+    opacity: 0;
+  }
+  button:hover > & {
+    visibility: hidden;
+    opacity: 0;
+    &--hover {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+.my-sliders_slide { padding: 0 rem-calc(40); }
+
 .news_slide {
-  float: left;
-  margin: 0 35px;
+  .img-holder {
+    margin-bottom: rem-calc(18);
+    position: relative;
+  }
   &_date {
     color: #777;
     font-size: rem-calc(14);
     font-weight: 300;
+    line-height: 1;
+    margin-bottom: rem-calc(16);
   }
   &_link {
     @include transition(color);
-    color: #606060;
-    &:hover { color: $green; }
+    color: $medium-gray;
+    font-weight: 600;
+    .news_slide:hover & { color: $green; }
+  }
+  .overlay-link {
+    @include transition(opacity, visibility);
+    @include sizes(100%);
+    background: rgba($green, 0.6);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .overlay-link_icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &:hover {
+    .overlay-link {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }
-.news_slide_date {}
+
+.my-slider_news {
+  margin-bottom: rem-calc(60);
+}
+
+.media_tabs-holder {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 rem-calc(50);
+}
+.media_tab-btn {
+  @include transition(color);
+  @include font-inherit;
+  color: $blue;
+  margin: 0 rem-calc(38);
+  &:hover, &.isActive { color: $green; }
+}
+
+.media-link-btn {
+  color: $light-gray;
+  display: inline-block;
+  line-height: 1;
+  padding: rem-calc(16) rem-calc(60);
+}
