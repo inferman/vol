@@ -1,0 +1,22 @@
+include mocky/mockyData
+include product-entity
+.my-slider.my-slider_product
+  each product in productsData
+    .my-sliders_slide.product_slide
+      .product_entity
+        .img-holder
+          img(src="../../assets/img/main-page/defmain.jpg").slide-img
+        .product_price-holder
+          span.product-price.product-price--regular #{product.regularPrice}
+          if(product.discountPrice)
+            span.product-price.product-price--discount #{product.discountPrice}
+
+        .product_title
+          a(href="#").title #{product.title}
+        .product_btns-holder
+          a(href="#").product-btn.product-btn--cart
+            span.text-holder
+              img(src="../../assets/img/main-page/cart_icon.png").cart-icon
+              | В корзину
+          a(href="#").product-btn.product-btn--compare
+            img(src="../../assets/img/main-page/compare_icon.png").compare-icon
