@@ -7,14 +7,11 @@
   padding: 0 rem-calc(100);
   margin: 0 auto;
   .slick {
-    &-list {
-      margin: 0 rem-calc(-35);
-    }
     &-arrow {
       @include sizes(40px, 75px);
       position: absolute;
-      top: 70px;
-      transform: none;
+      top: 50%;
+      transform: translate3D(0, -50%, 0);
     }
     &-next, &-prev {
       &:before { content: none; }
@@ -26,10 +23,10 @@
 }
 .slider_arrow-img {
   @include transition(opacity, visibility);
+  @include sizes($width: 40px, $height: 70px);
   position: absolute;
   left: 0;
   top: 0;
-  width: 40px;
   &--hover {
     visibility: hidden;
     opacity: 0;
@@ -43,7 +40,10 @@
     }
   }
 }
-.my-sliders_slide { padding: 0 rem-calc(40); }
+.my-sliders_slide {
+  padding: 0 rem-calc(40);
+  &.product_slide { padding: 0 rem-calc(12) }
+}
 
 .news_slide {
   .img-holder {
@@ -89,6 +89,14 @@
 
 .my-slider_news {
   margin-bottom: rem-calc(60);
+  .slick {
+    &-list { margin: 0 rem-calc(-40); }
+    &-arrow {
+      top: 70px;
+      transform: none;
+    }
+  }
+
 }
 
 .media_tabs-holder {

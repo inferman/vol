@@ -7,6 +7,8 @@
     &:hover {
       border-color: $green;
       box-shadow: 0px 2px 5px 0px rgba($green, 0.75);
+      .product_title { color: $green; }
+      .product-btn--cart { background: $green; }
     }
   }
   &_price-holder {
@@ -31,4 +33,53 @@
     }
   }
   &--discount { color: $red; }
+}
+
+
+.product_title {
+  @include transition(color);
+  color: $blue;
+  margin: 0 auto rem-calc(10);
+  max-width: 190px;
+  text-align: center;
+  .title { color: inherit; }
+}
+.product_btns-holder {
+  display: flex;
+}
+.product-btn {
+  color: $white;
+  flex: 1 1 0%;
+  text-align: center;
+  &:hover { color: $white; }
+  .btn-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3D(-50%, -50%, 0);
+  }
+  &--cart {
+    @include transition(background);
+    background: $blue;
+    padding: rem-calc(4) rem-calc(5);
+    margin-right: rem-calc(5);
+    &:last-child { margin-right: 0; }
+    .text-holder {
+      @include font-inherit;
+      color: inherit;
+      position: relative;
+      padding-left: rem-calc(52);
+    }
+    .cart-icon {
+      left: 0;
+      top: 50%;
+      transform: translate3D(0, -50%, 0);
+    }
+  }
+  &--compare {
+    border: 1px solid $blue;
+    padding: rem-calc(5) rem-calc(2);
+    flex: 0 0 auto;
+    max-width: 32px;
+  }
 }
