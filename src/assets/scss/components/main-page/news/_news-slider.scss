@@ -1,50 +1,6 @@
 .media_section {
   padding: rem-calc(40) 0 rem-calc(70);
 }
-
-.my-slider {
-  position: relative;
-  padding: 0 rem-calc(100);
-  margin: 0 auto;
-  .slick {
-    &-arrow {
-      @include sizes(40px, 75px);
-      position: absolute;
-      top: 50%;
-      transform: translate3D(0, -50%, 0);
-    }
-    &-next, &-prev {
-      &:before { content: none; }
-    }
-    &-prev { left: 0; }
-    &-next { right: 0; }
-  }
-  .slide-img { width: 100%; }
-}
-.slider_arrow-img {
-  @include transition(opacity, visibility);
-  @include sizes($width: 40px, $height: 70px);
-  position: absolute;
-  left: 0;
-  top: 0;
-  &--hover {
-    visibility: hidden;
-    opacity: 0;
-  }
-  button:hover > & {
-    visibility: hidden;
-    opacity: 0;
-    &--hover {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-}
-.my-sliders_slide {
-  padding: 0 rem-calc(40);
-  &.product_slide { padding: 0 rem-calc(12) }
-}
-
 .news_slide {
   .img-holder {
     margin-bottom: rem-calc(18);
@@ -112,7 +68,7 @@
   &:hover, &.isActive { color: $green; }
 }
 
-.media-link-btn {
+.common_link-btn {
   color: $light-gray;
   display: inline-block;
   line-height: 1;

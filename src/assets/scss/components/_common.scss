@@ -30,6 +30,12 @@ button { cursor: pointer; }
   }
 }
 
+.section-title {
+  color: $blue;
+  font-weight: 700;
+  margin-bottom: rem-calc(52);
+}
+
 .btn {
   flex: 0 0 auto;
   font-size: rem-calc(18);

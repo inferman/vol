@@ -1,3 +1,16 @@
+.products-section {
+  border-bottom: 3px solid $border-color;
+  padding: rem-calc(50) 0 rem-calc(32);
+  @include breakpoint(large only) {
+    padding: rem-calc(40) 0 rem-calc(32);
+  }
+  @include breakpoint(medium down) {
+    padding: rem-calc(24) 0 rem-calc(32);
+  }
+}
 .my-slider_product{
+  margin-bottom: rem-calc(40);
+  @include breakpoint(medium down) { margin-bottom: rem-calc(32); }
   .slick-list { margin: 0 rem-calc(-12); }
+  .product_slide { padding: 0 rem-calc(12) }
 }

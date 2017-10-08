@@ -10,6 +10,7 @@
       .product_title { color: $green; }
       .product-btn--cart { background: $green; }
     }
+    .img-holder { margin-bottom: rem-calc(14); }
   }
   &_price-holder {
     font-size: 0;
@@ -31,8 +32,15 @@
       margin-right: 0;
       text-decoration: none;
     }
+    @include breakpoint(large down) {
+      display: none;
+      &:last-child { display: inline-block; }
+    }
   }
-  &--discount { color: $red; }
+  &--discount {
+    color: $red;
+    @include breakpoint(large down) { color: $green; }
+  }
 }
 
 
@@ -44,9 +52,8 @@
   text-align: center;
   .title { color: inherit; }
 }
-.product_btns-holder {
-  display: flex;
-}
+.product_btns-holder { display: flex; }
+
 .product-btn {
   color: $white;
   flex: 1 1 0%;
