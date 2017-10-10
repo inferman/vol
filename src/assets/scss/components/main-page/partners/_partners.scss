@@ -1,0 +1,15 @@
+.partners_section {
+  background: $light-gray;
+  padding: rem-calc(20) 0 rem-calc(40);
+}
+.my-slider_partners {
+  .slick-arrow, .slider_arrow-img {
+    @include sizes($width:18px, $height:34px);
+  }
+}
+.partners_slide {
+  .img-holder { filter: grayscale(100%); }
+  &:hover {
+    .img-holder { filter: none; }
+  }
+}

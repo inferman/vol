@@ -1,3 +1,15 @@
-.main-header {
-  min-height: 210px;
+.header_menu,
+.header_content {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  h3 { margin: 0; }
+}
+
+.header_menu {
+  height: 52px;
+}
+.header_content {
+  background: $light-gray;
+  height: 160px;
 }

@@ -4,7 +4,7 @@ block content
   section.products-section
     .row.align-center
       .column.small-12
-        h1.section-title.text-center Новинки
+        h1.section-title.section-title--blue Новинки
         include products/products-slider
         .link-btn-holder.text-center
           a(href="#").common_link-btn.btn.btn--blue Смотреть все
@@ -12,7 +12,7 @@ block content
   section.products-section
     .row.align-center
       .column.small-12
-        h1.section-title.text-center Лидеры продаж
+        h1.section-title.section-title--blue Лидеры продаж
         include products/products-slider
         .link-btn-holder.text-center
           a(href="#").common_link-btn.btn.btn--blue Смотреть все
@@ -26,6 +26,12 @@ block content
           | Оформлять заказы станет ещё удобнее, если вы зарегистрируетесь в «Личном кабинете». Тогда вам будет доступен просмотр истории заказов, просмотр полученных скидок и не только.<br>
           | Одна из задач нашего магазина – поддержка детского, студенческого и аматорского спорта. При заказе товаров для команд вы обязательно получите скидку!
         p Виртуальные витрины Волеймаг постоянно пополняются новыми коллекциями спортивной экипировки! Делайте покупки оптом в и розницу на наших бесконечных полках!
+
+  section.partners_section
+    .row.align-center
+      .column.small-12
+        h1.section-title Наши бренды
+        include partners/partners-slider
 
   section.media_section
     .row.align-center

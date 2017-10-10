@@ -1,8 +1,12 @@
 .my-slider {
   position: relative;
-  padding: 0 rem-calc(100);
   margin: 0 auto;
+  @include breakpoint(large) { padding: 0 rem-calc(100); }
   .slick {
+    &-track {
+      display: flex;
+      align-items: center;
+    }
     &-arrow {
       @include sizes(40px, 75px);
       position: absolute;
@@ -39,4 +43,7 @@
   }
 }
 
-.my-sliders_slide { padding: 0 rem-calc(40); }
+.my-sliders_slide {
+  padding: 0 rem-calc(40);
+  flex: 0 0 auto;
+}

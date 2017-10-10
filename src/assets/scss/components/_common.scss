@@ -7,7 +7,11 @@ button { cursor: pointer; }
   flex-direction: column;
 }
 .main-header, .main-footer { flex: 0 0 auto; }
-.main-content-wrapper { flex: 1 0 auto; }
+.main-content-wrapper {
+  flex: 1 0 auto;
+  max-width: 100%;
+  overflow: hidden;
+}
 
 .ul {
   &--untitl {
@@ -31,9 +35,11 @@ button { cursor: pointer; }
 }
 
 .section-title {
-  color: $blue;
+  color: $medium-gray;
   font-weight: 700;
   margin-bottom: rem-calc(52);
+  text-align: center;
+  &--blue { color: $blue; }
 }
 
 .btn {
