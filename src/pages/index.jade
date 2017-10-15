@@ -43,13 +43,13 @@ block content
             a(href="#news" aria-selected="true").media_tab-btn Новости
             //-button(type="button").media_tab-btn.isActive Новости
           .tabs-title
-            a(href="#publications" aria-selected="true").media_tab-btn Новости
+            a(href="#publications" aria-selected="true").media_tab-btn Статьи
             //-button(type="button").media_tab-btn Статьи
         .tabs-content(data-tabs-content="articles-tabs")
           .tabs-panel.is-active#news
             include news-blocks/news-section
           .tabs-panel#publications
-            include news-blocks/news-section
+            include news-blocks/publications-section
         .link-btn-holder.text-center
           a(href="#").common_link-btn.btn.btn--blue Все новости
 
