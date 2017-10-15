@@ -38,10 +38,18 @@ block content
   section.media_section
     .row.align-center
       .column.small-12
-        .media_tabs-holder.text-center
-          button(type="button").media_tab-btn.isActive Новости
-          button(type="button").media_tab-btn Статьи
-        include news-blocks/news-section
+        .media_tabs-holder.text-center.tabs#articles-tabs(data-tabs)
+          .tabs-title.is-active
+            a(href="#news" aria-selected="true").media_tab-btn Новости
+            //-button(type="button").media_tab-btn.isActive Новости
+          .tabs-title
+            a(href="#publications" aria-selected="true").media_tab-btn Новости
+            //-button(type="button").media_tab-btn Статьи
+        .tabs-content(data-tabs-content="articles-tabs")
+          .tabs-panel.is-active#news
+            include news-blocks/news-section
+          .tabs-panel#publications
+            include news-blocks/news-section
         .link-btn-holder.text-center
           a(href="#").common_link-btn.btn.btn--blue Все новости
 
