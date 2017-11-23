@@ -75,21 +75,6 @@ var partnersSlider = {
     nextArrow: "<button type=\"button\" class=\"slick-next\"><img class=\"slider_arrow-img\" src=\"../../assets/img/slick/right-arrow.png\"><img class=\"slider_arrow-img slider_arrow-img--hover\" src=\"../../assets/img/slick/right-arrow--hover.png\"></button>",
     prevArrow: "<button type=\"button\" class=\"slick-prev\"><img class=\"slider_arrow-img\" src=\"../../assets/img/slick/left-arrow.png\"><img class=\"slider_arrow-img slider_arrow-img--hover\" src=\"../../assets/img/slick/left-arrow--hover.png\"></button>"
 };
-/*$(document).ready(function(){
-    // News slider
-    $('.my-slider_news').slick(newsSettings);
-
-    // Publications
-    $('#publications-label').on('click', function() {
-        $('.my-slider_publication').slick(newsSettings);
-    });
-
-    // Product slider
-    $('.my-slider_product').slick(productsSettings);
-
-    // Partners slider
-    $('.my-slider_partners').slick(partnersSlider);
-});*/
 
 (function ($) {
     $(function () {
