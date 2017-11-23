@@ -25,6 +25,8 @@ button { cursor: pointer; }
   }
 }
 
+.block-link { display: block; }
+
 .col-collapse {
   &--large {
     @include breakpoint(large) {

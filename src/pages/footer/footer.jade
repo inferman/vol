@@ -7,7 +7,7 @@ footer.main-footer
           .img-holder
             img(src="../assets/img/Logo_footer.png")
             h1.footer_logo_heading
-              | интернет-магазин спортивной экипировки <br>и аксессуаров
+              | интернет-магазин <br>спортивной&nbsp;экипировки <br>и аксессуаров
       .column.large-9.medium-6.small-12
         .row.footer_mailing-form
           .column.large-expand.small-12
@@ -16,14 +16,14 @@ footer.main-footer
             button(type="button").btn.btn--grey
               | Подписаться
       .column.large-2.small-6.medium-3.large-offset-3.footer_links.align-self-top
-        h3 О магазине
+        //-h3 О магазине
         nav.footer_nav
           ul.ul.ul--untitl
             each art in objOfLinks.about
               li
                 a(href="#") #{art}
       .column.large-3.small-6.medium-4.footer_links.align-self-top
-        h3 Информация
+        //-h3 Информация
         nav.footer_nav
           ul.ul.ul--untitl
             each info in objOfLinks.info

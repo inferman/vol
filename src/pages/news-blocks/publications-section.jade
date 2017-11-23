@@ -1,5 +1,5 @@
 .my-slider.my-slider_publication
-  -for(var i=1; i<=6; i++)
+  -for(var i=6; i>=1; i--)
     .my-sliders_slide.news_slide
       .img-holder.text-center
         img(src="../../assets/img/main-page/news-slide-#{i}.jpg").slide-img
@@ -7,3 +7,5 @@
           img(src="../../assets/img/main-page/eye_icon.png").overlay-link_icon
       p.news_slide_date 05.07.2016 г.
       a(href="#").news_slide_link Как выбрать кроссовки?
+.link-btn-holder.text-center
+  a(href="#").common_link-btn.btn.btn--blue Все публикации

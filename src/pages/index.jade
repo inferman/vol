@@ -2,7 +2,10 @@ extends ../layouts/default.jade
 
 block content
   section.main-slider-section
-    img(src="../../assets/img/main-page/main-slide.jpg")
+    a(href="#").block-link
+      img(src="../../assets/img/main-page/main-slide_clear.jpg")
+      .main-slider_text-holder
+        p.main-slider_text Твой волейбольный стиль с VolleyMAG!
   section.products-section
     .row.align-center
       .column.small-12
@@ -35,7 +38,7 @@ block content
         h1.section-title Наши бренды
         include partners/partners-slider
 
-  section.media_section
+  //-section.media_section
     .row.align-center
       .column.small-12
         .media_tabs-holder.text-center.tabs#articles-tabs(data-tabs)
@@ -51,5 +54,18 @@ block content
           .tabs-panel#publications
             include news-blocks/publications-section
         .link-btn-holder.text-center
+          a(href="#").common_link-btn.btn.btn--blue Все новости
+
+  section.media_section
+    .row.align-center
+      .column.small-12
+        .media_tabs-holder.text-center
+          button(type="button")#news-label.media_tab-btn Новости
+          button(type="button")#publications-label.media_tab-btn Статьи
+        #news.media_slider-holder
+          include news-blocks/news-section
+        #publications.media_slider-holder
+          include news-blocks/publications-section
+        //-.link-btn-holder.text-center
           a(href="#").common_link-btn.btn.btn--blue Все новости
 

@@ -43,7 +43,8 @@
   }
 }
 
-.my-slider_news {
+.my-slider_news,
+.my-slider_publication {
   margin-bottom: rem-calc(60);
   .slick {
     &-list { margin: 0 rem-calc(-40); }
@@ -54,6 +55,7 @@
   }
 
 }
+
 
 .media_tabs-holder {
   font-size: 26px;
@@ -69,8 +71,14 @@
 }
 
 .common_link-btn {
-  color: $light-gray;
+  //color: $light-gray;
+  @include transition(background);
+  color: $white;
   display: inline-block;
   line-height: 1;
   padding: rem-calc(16) rem-calc(60);
+  &:hover {
+    background: $green;
+    color: $white;
+  }
 }
