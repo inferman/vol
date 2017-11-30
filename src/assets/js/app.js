@@ -23,8 +23,8 @@ var newsSettings = {
             }
         }
     ],
-    nextArrow: "<button type=\"button\" class=\"slick-next\"><img class=\"slider_arrow-img\" src=\"../../assets/img/slick/arrow-next.png\"><img class=\"slider_arrow-img slider_arrow-img--hover\" src=\"../../assets/img/slick/arrow-next--hover.png\"></button>",
-    prevArrow: "<button type=\"button\" class=\"slick-prev\"><img class=\"slider_arrow-img\" src=\"../../assets/img/slick/arrow-prev.png\"><img class=\"slider_arrow-img slider_arrow-img--hover\" src=\"../../assets/img/slick/arrow-prev--hover.png\"></button>"
+    nextArrow: "<button type=\"button\" class=\"slick-next\"><img class=\"slider_arrow-img\" src=\"assets/img/slick/arrow-next.png\"><img class=\"slider_arrow-img slider_arrow-img--hover\" src=\"assets/img/slick/arrow-next--hover.png\"></button>",
+    prevArrow: "<button type=\"button\" class=\"slick-prev\"><img class=\"slider_arrow-img\" src=\"assets/img/slick/arrow-prev.png\"><img class=\"slider_arrow-img slider_arrow-img--hover\" src=\"assets/img/slick/arrow-prev--hover.png\"></button>"
 };
 
 var productsSettings = {
@@ -52,8 +52,8 @@ var productsSettings = {
             }
         }
     ],
-    nextArrow: "<button type=\"button\" class=\"slick-next\"><img class=\"slider_arrow-img\" src=\"../../assets/img/slick/arrow-next.png\"><img class=\"slider_arrow-img slider_arrow-img--hover\" src=\"../../assets/img/slick/arrow-next--hover.png\"></button>",
-    prevArrow: "<button type=\"button\" class=\"slick-prev\"><img class=\"slider_arrow-img\" src=\"../../assets/img/slick/arrow-prev.png\"><img class=\"slider_arrow-img slider_arrow-img--hover\" src=\"../../assets/img/slick/arrow-prev--hover.png\"></button>"
+    nextArrow: "<button type=\"button\" class=\"slick-next\"><img class=\"slider_arrow-img\" src=\"assets/img/slick/arrow-next.png\"><img class=\"slider_arrow-img slider_arrow-img--hover\" src=\"assets/img/slick/arrow-next--hover.png\"></button>",
+    prevArrow: "<button type=\"button\" class=\"slick-prev\"><img class=\"slider_arrow-img\" src=\"assets/img/slick/arrow-prev.png\"><img class=\"slider_arrow-img slider_arrow-img--hover\" src=\"assets/img/slick/arrow-prev--hover.png\"></button>"
 };
 
 var partnersSlider = {
@@ -72,8 +72,8 @@ var partnersSlider = {
             }
         }
     ],
-    nextArrow: "<button type=\"button\" class=\"slick-next\"><img class=\"slider_arrow-img\" src=\"../../assets/img/slick/right-arrow.png\"><img class=\"slider_arrow-img slider_arrow-img--hover\" src=\"../../assets/img/slick/right-arrow--hover.png\"></button>",
-    prevArrow: "<button type=\"button\" class=\"slick-prev\"><img class=\"slider_arrow-img\" src=\"../../assets/img/slick/left-arrow.png\"><img class=\"slider_arrow-img slider_arrow-img--hover\" src=\"../../assets/img/slick/left-arrow--hover.png\"></button>"
+    nextArrow: "<button type=\"button\" class=\"slick-next\"><img class=\"slider_arrow-img\" src=\"assets/img/slick/right-arrow.png\"><img class=\"slider_arrow-img slider_arrow-img--hover\" src=\"assets/img/slick/right-arrow--hover.png\"></button>",
+    prevArrow: "<button type=\"button\" class=\"slick-prev\"><img class=\"slider_arrow-img\" src=\"assets/img/slick/left-arrow.png\"><img class=\"slider_arrow-img slider_arrow-img--hover\" src=\"assets/img/slick/left-arrow--hover.png\"></button>"
 };
 
 (function ($) {
