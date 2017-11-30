@@ -4,7 +4,6 @@
   }
 }
 
-.additional-conditions { }
 .additional-conditions_item {
   .conditions-block {
     @include breakpoint(large) { padding-left: 92px; }
@@ -15,7 +14,10 @@
     padding-bottom: 20px;
     position: relative;
     @include breakpoint(large) { display: block; }
-    h4 { margin: 0; }
+  }
+  .article-title {
+    display: inline-block;
+    margin: 0;
   }
   .item_icon {
     width: 55px;
@@ -31,12 +33,28 @@
 
 .about_callout {
   .medium-size { font-size: 20px; }
-  h3 { margin-bottom: 5px; }
+  h3 {
+    line-height: 1;
+    margin: 0;
+  }
   p { margin-bottom: 0; }
+}
+
+.about_comments-section {
+  margin-bottom: 55px;
 }
 
 .about_partners {
   .section-title { margin-bottom: 40px; }
+}
 
-
+.answer-wrapper {
+  h3 { color: $blue; }
+  textarea {
+    border: 1px solid $border-color;
+    color: $text-color;
+    margin: 20px 0;
+    padding: 10px;
+    width: 100%;
+  }
 }

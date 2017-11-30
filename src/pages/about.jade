@@ -1,6 +1,7 @@
 extends ../layouts/default.jade
 
 block content
+  include ../partials/about-page/mocky/mocky-data
   .row.small-up-12
     section.about_main-content.column.column-block
       h1.section-title.section-title--blue О нас
@@ -28,12 +29,29 @@ block content
       .about_callout.text-center
         h3.article-title.article-title--blue.medium-size volleymag - Все для твоих побед!
         p.text-italic С уважением, коллектив магазина.
+
   section.about_partners
     h3.section-title Особая благодарность нашим партнерам:
     .partners_section.column.column-block
       .row.align-center
         .column.small-12
           include ../partials/main-page/partners/partners-slider
-  section.about_comments-section.column.column-block
 
+  section.about_comments-section.row
+    .comments-wrapper.column.small-12
+      each comment in aboutData
+        article.comment
+          .comment_header
+            .comment_date
+              span #{comment.date}
+            if comment.userName
+              .comment_user-name
+                a(href="#").comment_user-link #{comment.userName}
+          .comment_body
+            p #{comment.uaserComment}
+
+    .answer-wrapper.column.small-12
+      h3 Оставить отзыв:
+      textarea(rows="4")
+      button(type="button").btn.btn--blue Отправить
 
