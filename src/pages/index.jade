@@ -10,7 +10,7 @@ block content
     .row.align-center
       .column.small-12
         h1.section-title.section-title--blue Новинки
-        include products/products-slider
+        include main-page/products/products-slider
         .link-btn-holder.text-center
           a(href="#").common_link-btn.btn.btn--blue Смотреть все
 
@@ -18,14 +18,14 @@ block content
     .row.align-center
       .column.small-12
         h1.section-title.section-title--blue Лидеры продаж
-        include products/products-slider
+        include main-page/products/products-slider
         .link-btn-holder.text-center
           a(href="#").common_link-btn.btn.btn--blue Смотреть все
 
   section.features_section
     .row.align-center
       .column.small-10.collapse
-        include features-section/features-list
+        include main-page/features-section/features-list
         p
           | Вместе с нами купить спортивную одежду и обувь гораздо проще! Мы постоянно работаем над тем, чтобы покупки становились ещё выгоднее. Купить со скидкой в 5% качественную спортивную одежду и экипировку можно начиная уже со второй покупки!<br>
           | Оформлять заказы станет ещё удобнее, если вы зарегистрируетесь в «Личном кабинете». Тогда вам будет доступен просмотр истории заказов, просмотр полученных скидок и не только.<br>
@@ -36,8 +36,8 @@ block content
     .row.align-center
       .column.small-12
         h1.section-title Наши бренды
-        include partners/partners-slider
-          
+        include main-page/partners/partners-slider
+
 
   section.media_section
     .row.align-center
@@ -46,6 +46,6 @@ block content
           button(type="button")#news-label.media_tab-btn Новости
           button(type="button")#publications-label.media_tab-btn Статьи
         #news.media_slider-holder
-          include news-blocks/news-section
+          include main-page/news-blocks/news-section
         #publications.media_slider-holder
-          include news-blocks/publications-section
+          include main-page/news-blocks/publications-section

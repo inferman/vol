@@ -80,16 +80,14 @@ var partnersSlider = {
     $(function () {
         // News slider
         var newsSlider = function () {
-            $('#news-label').addClass('isActive');
-            $('#publications-label').removeClass('isActive');
+            $('#news-label').addClass('isActive').siblings().removeClass('isActive');
             $('#publications').hide();
             $('#news').show();
             $('.my-slider_news').slick(newsSettings);
         };
 
         var publicationsSlider = function () {
-            $('#publications-label').addClass('isActive');
-            $('#news-label').removeClass('isActive');
+            $('#publications-label').addClass('isActive').siblings().removeClass('isActive');
             $('#news').hide();
             $('#publications').show();
             $('.my-slider_publication').slick(newsSettings);
