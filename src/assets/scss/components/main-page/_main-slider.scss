@@ -17,3 +17,18 @@
     margin: 0;
   }
 }
+.my-slider_main {
+  .my-sliders_slide {
+    position: relative;
+    height: 210px;
+    @include breakpoint(medium) { height: 420px; }
+    @include breakpoint(large) { height: 555px; }
+  }
+  .slide-img {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+}

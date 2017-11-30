@@ -27,6 +27,16 @@ var newsSettings = {
     prevArrow: "<button type=\"button\" class=\"slick-prev\"><img class=\"slider_arrow-img\" src=\"assets/img/slick/arrow-prev.png\"><img class=\"slider_arrow-img slider_arrow-img--hover\" src=\"assets/img/slick/arrow-prev--hover.png\"></button>"
 };
 
+var mainSliderSettings = {
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    accessibility: false,
+    draggable: false,
+};
+
 var productsSettings = {
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -104,6 +114,9 @@ var partnersSlider = {
             newsSlider();
         });
 
+
+        // Main slider
+        $('.my-slider_main').slick(mainSliderSettings);
 
         // Product slider
         $('.my-slider_product').slick(productsSettings);

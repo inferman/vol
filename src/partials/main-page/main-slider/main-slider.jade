@@ -1,0 +1,9 @@
+include mocky/mockyData
+.my-slider.my-slider_main.my-slider--no-paddings
+  each text, index in sliderData
+    - i = index + 1;
+    .my-sliders_slide
+      a(href="#").block-link.slide_image-holder
+        img(src="assets/img/main-page/main-slide_" + i + ".jpg").slide-img
+        .main-slider_text-holder
+          p.main-slider_text #{text}

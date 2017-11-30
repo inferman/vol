@@ -21,6 +21,11 @@
     &-next { right: 0; }
   }
   .slide-img { width: 100%; }
+  //.slide_image-holder { position: relative; }
+  &--no-paddings {
+    @include breakpoint(large) { padding: 0; }
+    .my-sliders_slide { padding: 0; }
+  }
 }
 
 .slider_arrow-img {
