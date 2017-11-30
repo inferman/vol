@@ -1,0 +1,39 @@
+extends ../layouts/default.jade
+
+block content
+  .row.small-up-12
+    section.about_main-content.column.column-block
+      h1.section-title.section-title--blue О нас
+      p Компания volleymag (волеймаг) — онлайн магазин спортивной экипировки и аксессуаров, но прежде всего это коллектив профессионалов, по-настоящему любящих спорт. Именно поэтому Вы никогда не увидите в нашем магазине подделок или заведомо некачественных товаров. Только оригинальная профессиональная экипировка именитых брендов, таких как Mizuno, Asics, Errea, Mikasa, Mueller, Select, Umbro от официальных дилеров в Украине дают нам уверенность в том, что Вы останетесь довольны покупками и ничто не помешает Вам заниматься любимым спортом. <br> Каждый день мы дарим Вам новые эмоции и новые победы!
+
+      .additional-conditions
+        .additional-conditions_item
+          .conditions-block.conditions_title
+            img(src="assets/img/main-page/percent_icon--blue.png").item_icon
+            h4.article-title.article-title--blue Дополнительные скидки для постоянных покупателей
+          .conditions-block.conditions_content
+            p Мы очень ценим доверие наших клиентов и предоставляем  скидку в размере 5% на любой товар при оформлении второго и последующего заказа! <br> Для удобства оформления заказов Вы можете один раз зарегистрироваться на нашем сайте и в дальнейшем процесс оформления заказа сведется к одному клику мышкой!
+            p.text-italic Внимание! Если Вы уже оформляли заказ в нашем магазине, но не знаете как зайти в свою учетную запись - свяжитесь с менеджером магазина и Вас включат в систему скидок, как постоянного клиента!
+        .additional-conditions_item
+          .conditions-block.conditions_title
+            img(src="assets/img/main-page/support_icon.png").item_icon
+            h4.article-title.article-title--blue Специальные условия для команд
+          .conditions-block.conditions_content
+            p Поддержка детского, аматорского и студенческого спорта в Украине является одной из основных задач нашей работы, поэтому при заказе товаров на команду предоставляется дополнительная индивидуальная скидка на заказ. Размер скидки уточняйте у менеджера заказа.
+      p Если у Вас возникли какие-либо вопросы, то Вы всегда сможете связаться с нами любым удобным способом. Предложения по улучшению нашего магазина будут приняты с благодарностью. Подробности в разделе
+        | &nbsp;
+        a(href="#") Контакты.
+      p Мы неустанно прикладываем все усилия, чтобы создать самый лучший спортивный интернет-магазин, позволяющий сделать процесс покупок максимально приятным для Вас!
+
+      .about_callout.text-center
+        h3.article-title.article-title--blue.medium-size volleymag - Все для твоих побед!
+        p.text-italic С уважением, коллектив магазина.
+  section.about_partners
+    h3.section-title Особая благодарность нашим партнерам:
+    .partners_section.column.column-block
+      .row.align-center
+        .column.small-12
+          include ../partials/main-page/partners/partners-slider
+  section.about_comments-section.column.column-block
+
+
