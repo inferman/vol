@@ -1,0 +1,21 @@
+extends ../layouts/default.jade
+
+block content
+  include ../partials/news/mocky/mockyData
+  include ../partials/breadcrumbs
+  +breadcrumbs('Контакты')
+  .row
+    .column.small-12
+      h1.section-title.section-title--blue Контакты
+      p Получить консультацию в выборе товара, узнать наличие интересующих Вас
+        br
+        | моделей и условий доставки Вы можете, связавшись с менеджером любым удобным Вам способом:
+      ul.no-bullet
+        li
+          .icon-holder
+            img(src="assets/img/footer/mobile_icon.png")
+          .text-holder
+            a(href="tel:097-948-50-39").tel 097 948 50 39
+            a(href="tel:099-923-81-89").tel 099 923 81 89
+        li
+          
