@@ -2,6 +2,8 @@ extends ../layouts/default.jade
 
 block content
   include ../partials/about-page/mocky/mocky-data
+  include ../partials/breadcrumbs
+  +breadcrumbs('О Нас')
   .row.small-up-12
     section.about_main-content.column.column-block
       h1.section-title.section-title--blue О нас

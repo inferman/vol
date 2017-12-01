@@ -35,6 +35,14 @@ p > a {
 }
 
 .block-link { display: block; }
+.cursive-link {
+  @include transition(color);
+  font-style: italic;
+  &--blue {
+    color: $blue;
+  }
+  &:hover { color: $green; }
+}
 
 .col-collapse {
   &--large {
@@ -112,3 +120,43 @@ input {
   &:hover { color: $green; }
 }
 
+
+.breadcrumbs-block {
+  padding: 12px 0;
+  margin-bottom: 20px;
+}
+.breadcrumbs_list {
+  align-items: center;
+  color: $blue;
+  display: flex;
+  margin: 0;
+}
+.breadcrumbs_item {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  &:after {
+    content: '\f105';
+    font-family: 'FontAwesome';
+    font-size: 22px;
+    line-height: 1;
+    margin-left: 15px;
+  }
+  &:last-child {
+    margin: 0;
+    &:after { display: none; }
+  }
+}
+.breadcrumbs_link {
+  @include transition(color);
+  color: inherit;
+  font-size: 16px;
+  line-height: 1;
+  white-space: nowrap;
+  .fa {
+    font-size: 20px;
+    margin-right: 18px;
+  }
+  .breadcrumbs_item:hover > & { color: $green; }
+  .active > & { color: $green; }
+}

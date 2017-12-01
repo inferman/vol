@@ -1,0 +1,10 @@
+mixin breadcrumbs(next)
+  .breadcrumbs-block.row
+    .columns.small-12
+      ul.breadcrumbs_list.no-bullet
+        li.breadcrumbs_item
+          a(href="/").breadcrumbs_link
+            i(aria-hidden="true").fa.fa-home
+            | Главная
+        li.breadcrumbs_item.active
+          a(href="#").breadcrumbs_link #{next}

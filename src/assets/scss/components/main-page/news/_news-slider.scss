@@ -82,3 +82,23 @@
     color: $white;
   }
 }
+
+.article-container {
+  margin-bottom: 70px;
+}
+
+.news_flex-article {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .slide-img { width: 100%; }
+  .news_content {
+    flex: 1 1 0%;
+    margin-bottom: 15px;
+  }
+  .cursive-link {
+    font-size: 18px;
+    line-height: 1;
+    vertical-align: bottom;
+  }
+}
