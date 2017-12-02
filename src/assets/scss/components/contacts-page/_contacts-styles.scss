@@ -1,0 +1,28 @@
+.contacts-wrapper {
+  padding-bottom: 90px;
+}
+
+.contacts_list_item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  .icon-holder {
+    flex: 0 0 50px;
+  }
+  .inner-wrapper {
+    text-align: center;
+    width: 28px;
+  }
+  .text-holder {
+    flex: 0 0 auto;
+  }
+}
+
+.regular-txt {
+  color: $text-color;
+  display: block;
+  font-size: 16px;
+  font-weight: $global-weight-normal;
+  margin: 0;
+  padding: 0;
+}

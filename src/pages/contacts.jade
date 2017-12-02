@@ -4,18 +4,40 @@ block content
   include ../partials/news/mocky/mockyData
   include ../partials/breadcrumbs
   +breadcrumbs('Контакты')
-  .row
+  .row.contacts-wrapper
     .column.small-12
       h1.section-title.section-title--blue Контакты
       p Получить консультацию в выборе товара, узнать наличие интересующих Вас
         br
         | моделей и условий доставки Вы можете, связавшись с менеджером любым удобным Вам способом:
-      ul.no-bullet
-        li
+      ul.no-bullet.contacts_list
+        li.contacts_list_item
           .icon-holder
-            img(src="assets/img/footer/mobile_icon.png")
+            .inner-wrapper
+              img(src="assets/img/contacts/tel_icon--blue.png")
           .text-holder
-            a(href="tel:097-948-50-39").tel 097 948 50 39
-            a(href="tel:099-923-81-89").tel 099 923 81 89
-        li
-          
+            a(href="tel:097-948-50-39").regular-txt 097 948 50 39
+            a(href="tel:099-923-81-89").regular-txt 099 923 81 89
+        li.contacts_list_item
+          .icon-holder
+            .inner-wrapper
+              img(src="assets/img/contacts/mail_icon--blue.png")
+          .text-holder
+            a(href="mailto:zakaz@volleymag.com.ua").regular-txt zakaz@volleymag.com.ua
+        li.contacts_list_item
+          .icon-holder
+            .inner-wrapper
+              img(src="assets/img/contacts/skype_icon--blue.png")
+          .text-holder
+            span.regular-txt loginskype
+        li.contacts_list_item
+          .icon-holder
+            .inner-wrapper
+              img(src="assets/img/contacts/scheduller_icon--blue.png")
+          .text-holder
+            span.regular-txt Пн - Пт: 10:00 - 18:00
+            span.regular-txt Сб - Вс: выходной
+
+      p Для предложений сотрудничества, рекламы, а также по любым спорным вопросам Вы можете написать руководству магазина. <br> Предложения по улучшению нашего сервиса будут приняты с благодарностью.
+      .contacts_mailing-holder.text-center
+        button(type="button").btn.btn--blue Написать руководству
