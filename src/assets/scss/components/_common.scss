@@ -160,3 +160,36 @@ input {
   .breadcrumbs_item:hover > & { color: $green; }
   .active > & { color: $green; }
 }
+
+.radio-holder {
+  label {
+    cursor: pointer;
+    position: relative;
+    padding-left: rem-calc(40);
+  }
+  input[type='radio'],
+  input[type='checkbox'] {
+    visibility: hidden;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    padding: 0;
+    opacity: 0;
+    &:checked ~ .lbl { color: $green; }
+  }
+}
+.checkbox-trigger {
+  @include transition(background);
+  @include sizes(16px);
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  &--grey {
+    background: $medium-gray;
+    input:checked + & {
+      background: $green;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+extends ../layouts/default.jade
+
+block content
+  include ../partials/breadcrumbs
+  include ../partials/categories/mocky/mocky-data
+  +breadcrumbs('Кроссовки для волейбола')
+  .categories_wrapper
+    section.row
+      .columns.large-3
+        aside.categories_sidebar
+          ul(data-accordion).accordion
+            li(data-accordion-item).accordion-item.is-active
+              a(href="#").accordion-title Производитель
+              div(data-tab-content).accordion-content
+                ul.categories_brands-selector.no-bullet
+                  each brand in brands
+                    li
+                      .radio-holder
+                        label
+                          input(type="radio" name="radio-brand")
+                          span.checkbox-trigger.checkbox-trigger--grey
+                          span.lbl #{brand}
+
+            li(data-accordion-item).accordion-item
+              a(href="#").accordion-title Производитель
+              div(data-tab-content).accordion-content
+                ul.categories_brands-selector.no-bullet
+                  li
+                    .radio-holder
+                      label
+                        input(type="radio")
+                        | Выбрать все
+
+
+      .columns.large-8.large-offset-1
+        .categories_products
+          .row.large-up-3.categories_products-list
+            -for(var i=0; i<=8; i++)
+              .column
+                article.product_entity
+                  a(href="#").block-link
+                    .img-holder
+                      img(src="assets/img/main-page/defmain.jpg").slide-img
+                    .product_price-holder
+                      span.product-price.product-price--regular 1 679 грн
+
+                    .product_title
+                      p.title Кроссовки Mizuno Synchro SL 2 W SS17
+                  .product_btns-holder
+                    button(type="button").product-btn.product-btn--cart
+                      span.text-holder
+                        img(src="assets/img/main-page/cart_icon.png").btn-icon.cart-icon
+                        | В корзину
+                    a(href="#").product-btn.product-btn--compare
+                      img(src="assets/img/main-page/compare_icon.png").compare-icon
+          .row
+            .columns.small-12.text-center
+              button(type="button").common_link-btn.btn.btn--blue Показать еще
+
+    section.row
+      .columns.small-12
+        p Если вы – спортсмен или просто ведёте здоровый образ жизни, то вам, безусловно, нужно купить спортивную обувь. В Украине сейчас очень популярны гандбол и волейбол. Заниматься этими видами спорта без специальной обуви затруднительно. Волейбольные кроссовки позволят вам целиком погрузиться в атмосферу игры. Вы сможете полностью сосредоточиться на матче и вдохнуть полной грудью живительный воздух спорта, если решите купить волейбольные кроссовки в нашем магазине. Специалисты при работе над обувью учитывают все тонкости, с которыми могут столкнуться спортсмены. Именно поэтому стоит купить обувь у нас. Кроссовки для волейбола помогут вам полностью прочувствовать все эмоции, которые дарит спорт!
+  .row.align-center
+    .column.small-12
+      h1.section-title.section-title--blue Вы раньше смотрели
+      include ../partials/main-page/products/products-slider

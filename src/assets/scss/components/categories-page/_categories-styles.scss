@@ -1,0 +1,35 @@
+.categories_wrapper {
+  border-bottom: 3px solid #e1e1e1;
+  padding: 3.125rem 0 2rem;
+  margin-bottom: rem-calc(40);
+}
+.categories_products {
+  margin-bottom: rem-calc(60);
+  .categories_products-list { margin-bottom: rem-calc(24); }
+  .product_entity { margin-bottom: rem-calc(24); }
+}
+
+.categories_sidebar {
+  .accordion-item {
+    &.is-active {
+      .accordion-title { background: $green; }
+    }
+  }
+  .accordion-title {
+    background: $medium-gray;
+    &:hover,
+    &:focus { color: $white; }
+  }
+}
+
+.categories_brands-selector {
+  background: $light-gray;
+  padding: rem-calc(16) rem-calc(24) rem-calc(20) rem-calc(12);
+  li {
+    margin-bottom: rem-calc(14);
+  }
+  .lbl {
+    @include transition(color);
+    color: $medium-gray;
+  }
+}
