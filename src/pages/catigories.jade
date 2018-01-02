@@ -13,11 +13,14 @@ block content
               a(href="#").accordion-title Производитель
               div(data-tab-content).accordion-content
                 ul.categories_brands-selector.no-bullet
-                  each brand in brands
+                  each brand, i in brands
                     li
                       .radio-holder
                         label
-                          input(type="radio" name="radio-brand")
+                          if(i == 0)
+                            input(type="radio" name="radio-brand" checked)
+                          else
+                            input(type="radio" name="radio-brand")
                           span.checkbox-trigger.checkbox-trigger--grey
                           span.lbl #{brand}
 
