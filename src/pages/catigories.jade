@@ -6,7 +6,7 @@ block content
   +breadcrumbs('Кроссовки для волейбола')
   .categories_wrapper
     section.row
-      .columns.large-3
+      .columns.xlarge-3.large-4.medium-5.small-12
         aside.categories_sidebar
           ul(data-accordion).accordion
             li(data-accordion-item).accordion-item.is-active
@@ -23,21 +23,38 @@ block content
                             input(type="radio" name="radio-brand")
                           span.checkbox-trigger.checkbox-trigger--grey
                           span.lbl #{brand}
+                .categories_price-holder
+                  p Цена
+                  .btns-holder
+                    a(href="#").categories_price-btn
+                      | До&nbsp;
+                      span#fstVal
+                      | &nbsp;грн.
+                    a(href="#").categories_price-btn
+                      | До&nbsp;
+                      span#secVal
+                      | &nbsp;грн.
+                  .categories_range-slider
+                    .slider(data-slider data-start='1499' data-initial-start='1499' data-initial-end='3597' data-end='5000')
+                      span.slider-handle#sliderOutput1(data-slider-handle role='slider' tabindex='1')
+                      span.slider-fill(data-slider-fill)
+                      span.slider-handle#sliderOutput2(data-slider-handle role='slider' tabindex='1')
+                      input(type="hidden")
+                      input(type="hidden")
+            each itemTilte in sidebarItems
+              li(data-accordion-item).accordion-item
+                a(href="#").accordion-title #{itemTilte}
+                div(data-tab-content).accordion-content
+                  p some options
+        .categories_form-ctrls
+          button(type="button") Сброс
+          button(type="button") Поиск
 
-            li(data-accordion-item).accordion-item
-              a(href="#").accordion-title Производитель
-              div(data-tab-content).accordion-content
-                ul.categories_brands-selector.no-bullet
-                  li
-                    .radio-holder
-                      label
-                        input(type="radio")
-                        | Выбрать все
 
 
-      .columns.large-8.large-offset-1
+      .columns.large-8.xlarge-offset-1.medium-7.small-12
         .categories_products
-          .row.large-up-3.categories_products-list
+          .row.xlarge-up-3.large-up-2.small-up-1.categories_products-list
             -for(var i=0; i<=8; i++)
               .column
                 article.product_entity
@@ -63,6 +80,10 @@ block content
     section.row
       .columns.small-12
         p Если вы – спортсмен или просто ведёте здоровый образ жизни, то вам, безусловно, нужно купить спортивную обувь. В Украине сейчас очень популярны гандбол и волейбол. Заниматься этими видами спорта без специальной обуви затруднительно. Волейбольные кроссовки позволят вам целиком погрузиться в атмосферу игры. Вы сможете полностью сосредоточиться на матче и вдохнуть полной грудью живительный воздух спорта, если решите купить волейбольные кроссовки в нашем магазине. Специалисты при работе над обувью учитывают все тонкости, с которыми могут столкнуться спортсмены. Именно поэтому стоит купить обувь у нас. Кроссовки для волейбола помогут вам полностью прочувствовать все эмоции, которые дарит спорт!
+        //-.slider(data-slider data-initial-start='20' data-initial-end='70')
+          span.slider-handle(data-slider-handle role='slider' tabindex='1')
+          span.slider-fill(data-slider-fill)
+          input(type='hidden')
   .row.align-center
     .column.small-12
       h1.section-title.section-title--blue Вы раньше смотрели

@@ -124,4 +124,18 @@ var partnersSlider = {
         // Partners slider
         $('.my-slider_partners').slick(partnersSlider);
     });
+
+    var dataFstPrice;
+    var dataSecPrice;
+    var textFstPrice = $('#fstVal');
+    var textSecPrice = $('#secVal');
+    function setText() {
+        dataFstPrice = ($('#sliderOutput1').attr('aria-valuenow'));
+        dataSecPrice = ($('#sliderOutput2').attr('aria-valuenow'));
+        textFstPrice.text(dataFstPrice);
+        textSecPrice.text(dataSecPrice);
+    }
+    setText();
+    $('#sliderOutput1, #sliderOutput2').on('mouseup', setText);
+
 })(jQuery);

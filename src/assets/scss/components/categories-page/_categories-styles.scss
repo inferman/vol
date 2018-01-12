@@ -11,6 +11,7 @@
 
 .categories_sidebar {
   .accordion-item {
+    margin-bottom: rem-calc(10);
     &.is-active {
       .accordion-title { background: $green; }
     }
@@ -24,6 +25,7 @@
 
 .categories_brands-selector {
   background: $light-gray;
+  margin-bottom: rem-calc(25);
   padding: rem-calc(16) rem-calc(24) rem-calc(20) rem-calc(12);
   li {
     margin-bottom: rem-calc(14);
@@ -31,5 +33,43 @@
   .lbl {
     @include transition(color);
     color: $medium-gray;
+  }
+}
+
+.categories_price-holder {
+  margin-bottom: rem-calc(20) ;
+  p {
+    font-weight: 600;
+    line-height: 1;
+  }
+  .btns-holder {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: rem-calc(25);
+  }
+}
+
+.categories_price-btn {
+  border: 1px solid $medium-gray;
+  color: $medium-gray;
+  flex: 0 0 auto;
+  font-size: 1rem;
+  line-height: 1;
+  padding: rem-calc(10);
+}
+
+.categories_form-ctrls {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  button {
+    @include transition(background);
+    background: $medium-gray;
+    color: $white;
+    padding: rem-calc(10) rem-calc(15);
+    &:hover { background: $green; }
   }
 }
