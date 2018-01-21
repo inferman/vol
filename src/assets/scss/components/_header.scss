@@ -1,15 +1,70 @@
 .header_menu,
 .header_content {
-  align-items: center;
-  display: flex;
-  justify-content: center;
   h3 { margin: 0; }
 }
 
-.header_menu {
-  height: 52px;
+.main-header {
+  position: relative;
+  @include breakpoint(medium) {
+    padding-top: 61px;
+  }
 }
-.header_content {
+
+.header_menu {
+  max-width: 1200px;
+  padding: {
+    top: 18px;
+    bottom: 18px;
+  }
+  a {
+    color: $medium-gray;
+    font-size: 16px;
+    transition: color 0.3s;
+    &:hover, &.active { color: $green; }
+  }
+  @include breakpoint(medium) {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+}
+
+.header_content-wrapper {
   background: $light-gray;
-  height: 160px;
+}
+
+.header_content {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header_nav {
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+  }
+  li {
+    flex: 0 0 auto;
+    padding: 0 5px;
+    text-align: center;
+    white-space: nowrap;
+  }
+}
+
+.header_login-block {
+  position: relative;
+  padding-left: 45px;
+  .fa-user {
+    color: $medium-gray;
+    font-size: 22px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
