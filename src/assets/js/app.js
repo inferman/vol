@@ -136,6 +136,12 @@ var partnersSlider = {
         textSecPrice.text(dataSecPrice);
     }
     setText();
-    $('#sliderOutput1, #sliderOutput2').on('mousemove', setText);
+    //$('#sliderOutput1, #sliderOutput2').on('mousemove', setText);
+
+    $('#sliderOutput1, #sliderOutput2').on("mousedown", () =>
+        $(document)
+            .on("mousemove", setText)
+            .one("mouseup", () => $(document).off("mousemove", setText))
+    )
 
 })(jQuery);

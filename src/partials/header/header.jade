@@ -1,9 +1,38 @@
 header.main-header
   .header_content-wrapper
     section.header_content
-      .header_logo-holder
-        img(src='assets/img/logo_header.png')
-      .header_stream-block
-        include ./blocks/nav-block
-      .header_tel-holder
-      .header_btn-holder
+      .header_temp-wrapper
+        .header_logo-holder
+          img(src='assets/img/logo_header.png')
+        .header_stream-block
+          ul
+            li
+              button(type="button")
+          include ./blocks/nav-block
+        .header_tel-holder
+          .tel-holder_tel-icon
+            img(src="assets/img/footer/mobile_icon_blue.png")
+          .tel-holder_tel-numbers
+            a(href="") 097 948 50 39
+            a(href="") 099 923 81 89
+        .header_btn-holder
+          button(type="button").btn.btn--blue
+            | Обратный звонок
+      .header_sec-row
+        .header_categories
+          button(type="button").btn.btn--green
+            img(src="assets/img/footer/burger_icon.png").burger-icon
+            | Категории
+        .header_search
+          input(type="text" placeholder="Я ищу...")
+          button(type="submit").search-btn
+            img(src="assets/img/footer/search_icon.png").search-icon
+        .header_cart
+          img(src="assets/img/footer/cart_icon.png").header_cart-icon
+          .header_cart-dl-holder
+            dl.header_cart-dl
+              dt Товаров:
+              dd 0
+            dl.header_cart-dl
+              dt Сумма:
+              dd 0 грн.
