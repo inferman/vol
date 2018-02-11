@@ -3,14 +3,19 @@ header.main-header
     section.header_content
       .header_temp-wrapper
         .header_logo-holder
-          img(src='assets/img/logo_header.png')
+          a(href="/")
+            img(src='assets/img/logo_header.png')
         .header_stream-block
-          ul
+          ul.header_actions-holder.hide-for-large
             li
               button(type="button")
+                img(src="assets/img/footer/search_icon_grey.png").search-icon.action-icon
+            li
+              a(href="#")
+                img(src="assets/img/footer/cart_icon.png").header_cart-icon.action-icon
           include ./blocks/nav-block
         .header_tel-holder
-          .tel-holder_tel-icon
+          .tel-holder_tel-icon.show-for-medium
             img(src="assets/img/footer/mobile_icon_blue.png")
           .tel-holder_tel-numbers
             a(href="") 097 948 50 39
@@ -27,7 +32,7 @@ header.main-header
           input(type="text" placeholder="Я ищу...")
           button(type="submit").search-btn
             img(src="assets/img/footer/search_icon.png").search-icon
-        .header_cart
+        .header_cart.show-for-large
           img(src="assets/img/footer/cart_icon.png").header_cart-icon
           .header_cart-dl-holder
             dl.header_cart-dl
@@ -36,3 +41,7 @@ header.main-header
             dl.header_cart-dl
               dt Сумма:
               dd 0 грн.
+        .header_mobile-menu.hide-for-large
+          button(type="button").btn.btn--grey
+            i(aria-hidden='true').fa.fa-angle-down.toggle-arrow
+            | Меню

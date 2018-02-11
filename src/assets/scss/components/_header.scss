@@ -11,20 +11,24 @@
 .main-header {
   position: relative;
   z-index: 5;
-  @include breakpoint(medium) {
-    padding-top: 61px;
-  }
+  padding-top: 90px;
+  @include breakpoint(large) { padding-top: 61px; }
 }
 
 .header_menu {
   @include transition(opacity, visibillity);
-  position: absolute;
   background: $white;
+  justify-content: center;
+  position: absolute;
   opacity: 0;
   visibility: hidden;
-  &.active {
+  top: 100%;
+  left: 0;
+  width: 100%;
+  &.is-active {
     opacity: 1;
     visibility: visible;
+    z-index: 10;
   }
   a {
     color: $medium-gray;
@@ -32,22 +36,16 @@
     transition: color 0.3s;
     &:hover, &.active { color: $green; }
   }
-  .header_login-block {
-    padding-left: 45px;
-  }
+  .header_login-block { padding-left: 45px; }
   @include breakpoint(large) {
-    //position: absolute;
+    justify-content: space-between;
     left: 50%;
     top: 0;
     transform: translateX(-50%);
-    width: 100%;
     max-width: 1200px;
-    padding: {
-      top: 18px;
-      bottom: 18px;
-    }
     visibility: visible;
     opacity: 1;
+    padding: 18px 16px;
   }
 }
 
@@ -60,6 +58,7 @@
   display: flex;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 16px;
 }
 
 .header_nav {
@@ -75,9 +74,10 @@
   }
   li {
     flex: 0 0 auto;
-    //padding: 0 5px;
     text-align: center;
     white-space: nowrap;
+    margin-bottom: 10px;
+    @include breakpoint(large) { margin-bottom: 0; }
   }
 }
 
@@ -97,28 +97,55 @@
 .header_temp-wrapper {
   align-items: center;
   display: flex;
-  max-width: 895px;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
-  .header_logo-holder,
+  @include breakpoint(xlarge) { max-width: 890px; }
   .header_btn-holder {
-    flex: 0 0 auto;
-  }
-  .header_logo-holder {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    @include breakpoint(large) {
-      position: static;
-      transform: none;
+    flex: 0 0 48%;
+    max-width: 48%;
+    @include breakpoint(small only) {
+      flex: 1 1 0%;
+      max-width: none;
     }
+    @include breakpoint(large) { flex-basis: auto; }
   }
-  .header_tel-holder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1 1 0%;
+  .btn {
+    min-width: 234px;
+    width: 100%;
+    @include breakpoint(small only) {
+      font-size: 16px;
+      padding: 12px 20px;
+      min-width: 0;
+    }
+    @include breakpoint(large) { width: auto; }
   }
+}
+.header_logo-holder {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+  @include breakpoint(large) {
+    flex: 0 0 auto;
+    position: static;
+    transform: none;
+    width: auto;
+  }
+}
+.header_tel-holder {
+  display: flex;
+  align-items: center;
+  flex: 0 0 48%;
+  max-width: 48%;
+  @include breakpoint(small only) {
+    flex: 0 0 auto;
+    margin-right: 24px;
+  }
+  @include breakpoint(medium) { justify-content: center; }
+  @include breakpoint(large) { flex: 1 1 0%; }
 }
 
 .tel-holder_tel-icon {
@@ -134,35 +161,67 @@
 
 
 .header_stream-block {
-  position: relative;
-  @include breakpoint(large) { position: static;}
-  .header_menu {
-
+  width: 100%;
+  margin-bottom: 28px;
+  @include breakpoint(large) {
+    margin-bottom: 0;
+    width: auto;
   }
 }
 
+.header_actions-holder {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  max-width: 335px;
+  margin: 0 auto;
+  li {
 
-
-
-
-
-
-
+  }
+  .action-icon {
+    display: block;
+    max-height: 35px;
+    margin: 0;
+    padding: 0;
+  }
+}
 
 .header_sec-row {
   display: flex;
   flex: 0 0 100%;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
   max-width: 100%;
   padding-top: 16px;
+  @include breakpoint(large) {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
 }
+
 .header_categories {
-  flex: 0 0 auto;
-  margin-right: 15px;
+  flex: 0 0 100%;
+  max-width: 100%;
   .btn {
     position: relative;
     min-height: 100%;
-    min-width: 293px;
+    min-width: 0;
+    width: 100%;
+  }
+  @include breakpoint(small only) {
+    margin-bottom: 5px;
+  }
+  @include breakpoint(medium) {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
+  @include breakpoint(large) {
+    flex: 0 0 auto;
+    .btn {
+      min-width: 293px;
+      width: auto;
+    }
   }
   .burger-icon {
     position: absolute;
@@ -172,21 +231,47 @@
   }
 }
 .header_search {
+  @include transition(visibility, opacity);
   display: flex;
   flex: 1 1 0%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+  @include breakpoint(large) {
+    margin: 0 30px 0 22px;
+    max-width: 575px;
+    position: static;
+    opacity: 1;
+    visibility: visible;
+  }
   input {
     border-color: $blue;
     color: $blue;
     flex: 1 1 0%;
+    padding: 12px 22px;
+    font-style: italic;
+    &::-webkit-input-placeholder {color:$blue;}
+    &::-moz-placeholder          {color:$blue;}
+    &:-moz-placeholder           {color:$blue;}
+    &:-ms-input-placeholder      {color:$blue;}
   }
   .search-btn {
-    @include transition(background);
-    @include sizes($height: 45px, $width: 80px);
+    @include sizes($height: auto, $width: 80px);
     background: $blue;
     flex: 0 0 auto;
     position: relative;
-    margin-left: 7px;
-    &:hover { background: $green; }
+    @include breakpoint(large) {
+      @include transition(background);
+      margin-left: 7px;
+      &:hover { background: $green; }
+    }
   }
   .search-icon {
     position: absolute;
@@ -195,6 +280,7 @@
     transform: translate(-50%, -50%);
   }
 }
+
 .header_cart {
   flex: 0 0 auto;
   display: flex;
@@ -212,8 +298,39 @@
   dt, dd {
     flex: 0 0 auto;
     margin-bottom: 0;
+    font-weight: 400;
   }
   dt {
     margin-right: 5px;
+  }
+}
+
+.header_mobile-menu {
+  flex: 0 0 100%;
+  max-width: 100%;
+  @include breakpoint(small only) {
+    margin-bottom: 5px;
+    order: -1;
+  }
+  @include breakpoint(medium) {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
+  .btn {
+    position: relative;
+    width: 100%;
+  }
+  .fa {
+    font-size: 32px;
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.toggle-arrow {
+  .is-active > & {
+    &:before { content: "\f106";}
   }
 }
