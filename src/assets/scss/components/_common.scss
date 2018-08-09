@@ -14,14 +14,25 @@ button { cursor: pointer; }
 }
 
 .ul {
+  li { line-height: 1; }
   &--untitl {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
   &--inline { display: flex; }
-  li {
-    line-height: 1;
+  &--dashed {
+    li {
+      position: relative;
+      padding-left: 10px;
+      &:before {
+        content: '-';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
   }
 }
 

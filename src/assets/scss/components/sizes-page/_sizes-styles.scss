@@ -1,0 +1,23 @@
+.sizes_main-content {
+  h3 {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  p { margin-bottom: 24px; }
+  .ul--dashed { margin-bottom: 16px; }
+}
+
+.sizes_size-grids {
+  text-align: center;
+  h2, h3 {
+    color: $blue;
+    font-weight: 700;
+  }
+  h2 { font-size: 22px; }
+  h3 {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+  .grid_content { margin-bottom: 48px; }
+  .grid_details { margin-bottom: 28px; }
+}
