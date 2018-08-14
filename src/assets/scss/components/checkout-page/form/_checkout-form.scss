@@ -1,0 +1,19 @@
+.checkout_form {
+  margin-bottom: 55px;
+}
+.checkout_payment-methods {
+  li { margin-bottom: 20px; }
+}
+
+.checkout_form-wrapper {
+  .input-holder {
+    color: $medium-gray;
+    margin-bottom: 18px;
+    input,
+    textarea {
+      padding: 14px 18px;
+      width: 100%;
+    }
+    .lbl { font-style: italic; }
+  }
+}

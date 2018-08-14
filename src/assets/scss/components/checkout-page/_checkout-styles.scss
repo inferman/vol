@@ -2,3 +2,12 @@
 @import "form/checkout-form";
 
 .checkout_table-row { margin-bottom: 30px; }
+
+.checkout_thead-row,
+.checkout_tbody-row,
+.checkout_btns-row,
+.checkout_total-amount,
+.checkout_form {
+  padding-left: 15px;
+  padding-right: 15px;
+}

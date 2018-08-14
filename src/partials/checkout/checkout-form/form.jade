@@ -1,0 +1,47 @@
+form
+  ul.checkout_payment-methods.no-bullet
+    li
+      .radio-holder.top-trigger
+        label
+          input(type="radio" name="payments" checked)
+          span.checkbox-trigger.checkbox-trigger--grey
+          span.lbl Полная предоплата (переводом на карту или через терминал Приватбанка)
+    li
+      .radio-holder.top-trigger
+        label
+          input(type="radio" name="payments")
+          span.checkbox-trigger.checkbox-trigger--grey
+          span.lbl Наложенный платеж (оплата заказа после его фактического получения на складе транспортной компании)<br>
+            i Внимание!<br>
+              | Наложеным платежом отправляются заказы на общую сумму более 400 грн.
+
+    li
+      .radio-holder.top-trigger
+        label
+          input(type="radio" name="payments")
+          span.checkbox-trigger.checkbox-trigger--grey
+          span.lbl Безналичный расчет
+
+  .checkout_form-wrapper.row
+    .columns.small-5
+      .row.small-up-1
+        .input-holder.column
+          input(type="text", placeholder="Имя")
+        .input-holder.column
+          input(type="text", placeholder="Фамилия")
+        .input-holder.column
+          input(type="text", placeholder="Мобильный телефон (+380991112233)")
+        .input-holder.column
+          input(type="text", placeholder="Email (example@example.com)")
+        .input-holder.column
+          input(type="text", placeholder="Введите ваш город")
+        .input-holder.column
+          textarea(placeholder="Комментарий к заказу")
+        .input-holder.column
+          .radio-holder.top-trigger
+            label
+              input(type="checkbox" name="callback")
+              span.checkbox-trigger.checkbox-trigger--grey
+              span.lbl Не звонить для подтверждения заказа
+        .input-holder.column
+          button(type="button").btn.btn--blue Оформить заказ

@@ -100,7 +100,9 @@ p > a {
   }
 }
 
-input {
+input,
+textarea {
+  color: inherit;
   border: 1px solid $border-color;
   &:focus {
     outline: none;
@@ -174,10 +176,12 @@ input {
 
 .radio-holder {
   label {
+    display: block;
     cursor: pointer;
     position: relative;
     padding-left: rem-calc(40);
   }
+  .lbl { display: block; }
   input[type='radio'],
   input[type='checkbox'] {
     visibility: hidden;
@@ -202,6 +206,10 @@ input {
     input:checked + & {
       background: $green;
     }
+  }
+  .top-trigger & {
+    top: 4px;
+    transform: none;
   }
 }
 
