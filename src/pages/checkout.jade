@@ -1,0 +1,26 @@
+extends ../layouts/default.jade
+
+block content
+  include ../partials/breadcrumbs
+  include ../partials/checkout/mocky/mockyData
+  +breadcrumbs('Корзина')
+  .row
+    .column.small-12
+      h1.section-title.section-title--blue Корзина
+  .row.expanded.checkout_table-row
+    .columns.small-12
+      .row.align-center
+        .column.shrink
+          .table-wrapper
+            table.checkout_table
+              thead
+                tr
+                  each th in tableHeaders
+                    th(height="75") #{ th }
+              tbody
+                tr
+                  td 1
+                  td 2
+                  td 3
+                  td 4
+                  td 5
