@@ -1,0 +1,64 @@
+extends ../layouts/default.jade
+
+block content
+  include ../partials/breadcrumbs
+  +breadcrumbs('Кросовки для бега')
+  section.product-card_main-section
+    .row
+      .column.small-12
+        h1.section-title.section-title--blue.text-left Кроссовки Mizuno Wave Inspire 13 SS17
+    .row.product-card_card-wrapper
+      .columns.large-5
+        .product-card_product-pic
+          .product-pic_main
+          .product-pic_additional
+      .columns.large-7
+        .product-card_info
+          ul.product-info_flex-list
+            li
+              .product-card_logo-holder
+                img(src="assets/img/main-page/mizuno_logo.png")
+            li
+              dl.product-card_dl
+                dt Артикул:
+                dd V1GA17004
+            li
+              dl.product-card_dl
+                dt Пол:
+                dd Men
+            li
+              dl.product-card_dl
+                dt Размер UK:
+                dd
+                  select
+                    -for(var i = 1; i<=9; i++)
+                      option(value="#{i}") #{i}
+            li
+              div Выбрать цвет:
+              .product-slider
+            li
+              button(type="button").btn.btn--blue Заказать в один клик
+            li
+              .product-card_price-block
+                span Цена:
+                .price-holder
+                  .current-price 3558 грн
+                  .old-price 4299 грн
+            li
+              .product-card_compare
+                span Сравнить:
+                a(href="#").product-btn.product-btn--compare
+                  img(src="assets/img/main-page/compare_icon.png").compare-icon
+            li
+              button(type="button").btn.btn--blue.sm Размерная сетка
+            li
+              .product-card_stock
+                .text-center.label Количество:
+                .checkout_stock
+                  button(type="button").checkout_btn.checkout_btn--decrease
+                  input(type="number" min="1")
+                  button(type="button").checkout_btn.checkout_btn--increase
+            li
+              button(type="button").btn.btn--green.product_checkout-btn
+                img(src="assets/img/checkout-icon--white.png")
+                | В корзину

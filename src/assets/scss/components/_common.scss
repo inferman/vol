@@ -68,8 +68,8 @@ p > a {
   color: $medium-gray;
   font-weight: 700;
   margin-bottom: rem-calc(52);
-  text-align: center;
   &--blue { color: $blue; }
+  &:not(.text-left) {text-align: center;}
 }
 
 .article-title {

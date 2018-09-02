@@ -29,20 +29,6 @@
     border: 1px solid $border-color;
   }
   .product-name { color: $blue; }
-  .checkout_btn {
-    @include sizes(25px);
-    &--decrease {
-      background: url('../../../../assets/img/checkout/decrease.png') 50% 50%/contain no-repeat;
-      left: 0;
-    }
-    &--increase {
-      background: url('../../../../assets/img/checkout/increase.png') 50% 50%/contain no-repeat;
-      right: 0;
-    }
-    &--remove {
-      background: url('../../../../assets/img/checkout/remove-item.png') 50% 50%/contain no-repeat;
-    }
-  }
 }
 .checkout_stock {
   display: flex;
@@ -57,7 +43,21 @@
     text-align: center;
     flex: 1 1 0%
   }
-  .checkout_btn { flex: 0 0 auto; }
+  .checkout_btn {
+    @include sizes(25px);
+    flex: 0 0 auto;
+    &--decrease {
+      background: url('../img/checkout/decrease.png') 50% 50%/contain no-repeat;
+      left: 0;
+    }
+    &--increase {
+      background: url('../img/checkout/increase.png') 50% 50%/contain no-repeat;
+      right: 0;
+    }
+    &--remove {
+      background: url('../img/checkout/remove-item.png') 50% 50%/contain no-repeat;
+    }
+  }
 }
 
 .checkout_total-amount {

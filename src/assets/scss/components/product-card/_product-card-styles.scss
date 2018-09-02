@@ -1,0 +1,115 @@
+.product-card_main-section {
+  border-bottom: 3px solid $border-color;
+  padding-bottom: 35px;
+  margin-bottom: 20px;
+}
+
+.product-card_product-pic {
+  border: 1px solid $blue;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  > div { width: 100%; }
+  .product-pic_main { flex: 0 0 80%; }
+  .product-pic_additional { flex: 0 0 20%; }
+}
+
+.product-card_info {
+  background: $light-gray;
+  padding: 16px 10px;
+}
+
+.product-info_flex-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 420px;
+  list-style-type: none;
+  margin: 0;
+  li {
+    padding: 0 10px;
+    margin-bottom: 20px;
+    width: 50%;
+  }
+  .btn {
+    width: 100%;
+    &.sm { font-size: 1rem; }
+  }
+}
+
+.product-card_logo-holder {
+  height: 70px;
+  img { max-height: 100%; }
+}
+
+.product-card_dl {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  dt {
+    font-weight: $global-weight-normal;
+    line-height: 1.3;
+    margin: 0;
+    width: 125px;
+  }
+  select {
+    border-color: $green;
+    font-size: 1rem;
+    padding: 8px;
+    min-width: 100px;
+    text-align: center;
+  }
+}
+
+.product-card_price-block {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  line-height: 1;
+  > span {
+    margin-right: 30px;
+  }
+  .price-holder {
+    color: #ea4556;
+    font-size: rem-calc(36);
+    position: relative;
+    min-width: 150px;
+  }
+  .current-price:not(:last-child) { padding-bottom: 40px; }
+  .old-price {
+    color: $green;
+    font-size: rem-calc(24);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    text-decoration: line-through;
+    width: 100%;
+  }
+}
+
+.product-card_compare {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > span {
+    margin-right: 25px;
+  }
+}
+
+.product-card_stock {
+  .label {
+    line-height: 1;
+    margin-bottom: 30px;
+  }
+}
+
+.product_checkout-btn {
+  position: relative;
+  img {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
