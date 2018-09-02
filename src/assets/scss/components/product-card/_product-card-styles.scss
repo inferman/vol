@@ -4,32 +4,86 @@
   margin-bottom: 20px;
 }
 
+.product-card_card-wrapper {
+  position: relative;
+  max-height: 450px;
+  ul {
+    list-style-type: none;
+    margin: 0;
+  }
+  @include breakpoint(small only) {
+    padding-top: 100px;
+  }
+}
+
 .product-card_product-pic {
   border: 1px solid $blue;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   height: 100%;
   > div { width: 100%; }
-  .product-pic_main { flex: 0 0 80%; }
-  .product-pic_additional { flex: 0 0 20%; }
+  .product-pic_main {
+    flex: 1 1 0%;
+    max-height: 80%;
+    text-align: center;
+  }
+  .product-pic_additional {
+    flex: 0 0 auto;
+    max-height: 90px;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 7px 0;
+    > li {
+      display: inline-block;
+      padding: 0 7px;
+      width: calc(20% - 7px);
+    }
+  }
+  .product-pic_thumbnail {
+    border: 1px solid $border-color;
+    padding: 50%;
+    position: relative;
+    overflow: hidden;
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  img {
+    max-height: 100%;
+  }
 }
 
 .product-card_info {
   background: $light-gray;
   padding: 16px 10px;
+  height: 100%;
 }
 
 .product-info_flex-list {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  max-height: 420px;
-  list-style-type: none;
-  margin: 0;
   li {
     padding: 0 10px;
-    margin-bottom: 20px;
-    width: 50%;
+    &:not(:last-child) { margin-bottom: 20px; }
+  }
+  @include breakpoint(medium) {
+    max-height: 100%;
+    li { width: 50%; }
+  }
+  @include breakpoint(small only) {
+    li {
+      &:nth-child(9) { order: 10; }
+      &:nth-child(6) { order: 9; }
+      &:nth-child(11) { order: 11; }
+    }
   }
   .btn {
     width: 100%;
@@ -64,11 +118,9 @@
 .product-card_price-block {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-end;
+  justify-content: space-between;
   line-height: 1;
-  > span {
-    margin-right: 30px;
-  }
+  > .label { margin-right: 30px; }
   .price-holder {
     color: #ea4556;
     font-size: rem-calc(36);
@@ -86,15 +138,23 @@
     text-decoration: line-through;
     width: 100%;
   }
+  @include breakpoint(small only) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 10px;
+    width: 100%;
+  }
+  @include breakpoint(medium) {
+    justify-content: flex-end;
+  }
 }
 
 .product-card_compare {
   display: flex;
   align-items: center;
   justify-content: center;
-  > span {
-    margin-right: 25px;
-  }
+  > .label { margin-right: 30px; }
 }
 
 .product-card_stock {
