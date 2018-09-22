@@ -10,15 +10,15 @@ block content
     .row.product-card_card-wrapper
       .columns.large-5.small-12
         .product-card_product-pic
-          .product-pic_main
+          .product-card_pic_main
             img(src="assets/img/main-page/defmain.jpg")
-          ul.product-pic_additional
-            -for(var i = 0; i <= 4; i++)
-              li
-                .product-pic_thumbnail
-                  img(src="assets/img/sizes/defmain.jpg")
 
-      .columns.large-7.small-12
+      .product-card_info-column.columns.large-7.small-12
+        ul.product-card_pic_additional
+          -for(var i = 0; i <= 3; i++)
+            li
+              .product-card_pic_thumbnail
+                img(src="assets/img/sizes/defmain.jpg")
         .product-card_info
           ul.product-info_flex-list
             li
@@ -40,9 +40,11 @@ block content
                     -for(var i = 1; i<=9; i++)
                       option(value="#{i}") #{i}
             li
-              .label Выбрать цвет:
-              .product-slider
-            li
+              .colors-slider_box
+                .label Выбрать цвет:
+                .product-slider
+                  include ../partials/product-card/color-slider
+            li.m0
               button(type="button").btn.btn--blue Заказать в один клик
             li
               .product-card_price-block
@@ -64,7 +66,7 @@ block content
                   button(type="button").checkout_btn.checkout_btn--decrease
                   input(type="number" min="1")
                   button(type="button").checkout_btn.checkout_btn--increase
-            li
+            li.m0
               button(type="button").btn.btn--green.product_checkout-btn
                 img(src="assets/img/checkout-icon--white.png")
                 | В корзину

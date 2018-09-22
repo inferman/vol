@@ -1,5 +1,5 @@
 $(document).foundation();
-var newsSettings = {
+const newsSettings = {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: false,
@@ -27,7 +27,7 @@ var newsSettings = {
     prevArrow: "<button type=\"button\" class=\"slick-prev\"><img class=\"slider_arrow-img\" src=\"assets/img/slick/arrow-prev.png\"><img class=\"slider_arrow-img slider_arrow-img--hover\" src=\"assets/img/slick/arrow-prev--hover.png\"></button>"
 };
 
-var mainSliderSettings = {
+const mainSliderSettings = {
     arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -37,7 +37,7 @@ var mainSliderSettings = {
     draggable: false,
 };
 
-var productsSettings = {
+const productsSettings = {
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: false,
@@ -62,11 +62,11 @@ var productsSettings = {
             }
         }
     ],
-    nextArrow: "<button type=\"button\" class=\"slick-next\"><img class=\"slider_arrow-img\" src=\"assets/img/slick/arrow-next.png\"><img class=\"slider_arrow-img slider_arrow-img--hover\" src=\"assets/img/slick/arrow-next--hover.png\"></button>",
-    prevArrow: "<button type=\"button\" class=\"slick-prev\"><img class=\"slider_arrow-img\" src=\"assets/img/slick/arrow-prev.png\"><img class=\"slider_arrow-img slider_arrow-img--hover\" src=\"assets/img/slick/arrow-prev--hover.png\"></button>"
+    nextArrow: "<button type=\"button\" class=\"slick-next\"><img class=\"slider_arrow-img\" src=\"assets/img/slick/left-arrow--sm.png\"><img class=\"slider_arrow-img slider_arrow-img--hover\" src=\"assets/img/slick/arrow-next--hover.png\"></button>",
+    prevArrow: "<button type=\"button\" class=\"slick-prev\"><img class=\"slider_arrow-img\" src=\"assets/img/slick/right-arrow--sm.png\"><img class=\"slider_arrow-img slider_arrow-img--hover\" src=\"assets/img/slick/arrow-prev--hover.png\"></button>"
 };
 
-var partnersSlider = {
+const partnersSlider = {
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
@@ -86,17 +86,27 @@ var partnersSlider = {
     prevArrow: "<button type=\"button\" class=\"slick-prev\"><img class=\"slider_arrow-img\" src=\"assets/img/slick/left-arrow.png\"><img class=\"slider_arrow-img slider_arrow-img--hover\" src=\"assets/img/slick/left-arrow--hover.png\"></button>"
 };
 
+const productColorsSlider = {
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: false,
+  accessibility: false,
+  draggable: false,
+  nextArrow: "<button type=\"button\" class=\"slick-next\"><img class=\"slider_arrow-img\" src=\"assets/img/slick/right-arrow--sm.png\"><img class=\"slider_arrow-img slider_arrow-img--hover\" src=\"assets/img/slick/right-arrow-hover--sm.png\"></button>",
+  prevArrow: "<button type=\"button\" class=\"slick-prev\"><img class=\"slider_arrow-img\" src=\"assets/img/slick/left-arrow--sm.png\"><img class=\"slider_arrow-img slider_arrow-img--hover\" src=\"assets/img/slick/left-arrow-hover--sm.png\"></button>"
+};
+
 (function ($) {
     $(function () {
         // News slider
-        var newsSlider = function () {
+        const newsSlider = function () {
             $('#news-label').addClass('isActive').siblings().removeClass('isActive');
             $('#publications').hide();
             $('#news').show();
             $('.my-slider_news').slick(newsSettings);
         };
 
-        var publicationsSlider = function () {
+        const publicationsSlider = function () {
             $('#publications-label').addClass('isActive').siblings().removeClass('isActive');
             $('#news').hide();
             $('#publications').show();
@@ -123,12 +133,15 @@ var partnersSlider = {
 
         // Partners slider
         $('.my-slider_partners').slick(partnersSlider);
+
+        // Product colors slider
+        $('.my-slider_product-colors').slick(productColorsSlider);
     });
 
-    var dataFstPrice;
-    var dataSecPrice;
-    var textFstPrice = $('#fstVal');
-    var textSecPrice = $('#secVal');
+    let dataFstPrice,
+        dataSecPrice,
+        textFstPrice = $('#fstVal'),
+        textSecPrice = $('#secVal');
     function setText() {
         dataFstPrice = ($('#sliderOutput1').attr('aria-valuenow'));
         dataSecPrice = ($('#sliderOutput2').attr('aria-valuenow'));
@@ -138,7 +151,7 @@ var partnersSlider = {
     setText();
     //$('#sliderOutput1, #sliderOutput2').on('mousemove', setText);
 
-    $('#sliderOutput1, #sliderOutput2').on("mousedown", () =>
+    $('#sliderOutput1, #sliderOutput2').on("mousedown", _ =>
         $(document)
             .on("mousemove", setText)
             .one("mouseup", () => $(document).off("mousemove", setText))
