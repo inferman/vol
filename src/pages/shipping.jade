@@ -1,0 +1,31 @@
+extends ../layouts/default.jade
+
+block content
+  include ../partials/breadcrumbs
+  include ../partials/shipping/mocky/mockyData
+  +breadcrumbs('Оплата и доставка')
+  section.payments_wtapper
+    .row.align-center
+      .column.small-12
+        h1.section-title.section-title--blue Оплата
+    .row
+      .small-12
+        p Оформляя заказ в нашем магазине Вы имеете возможность выбрать любую, удобную Вам форму оплаты:
+
+    .row
+      .small-12.large-10
+        .payments_conditions-block
+          .payments_terms-row
+            .payments_terms-item.payments_terms-item--absolute
+              .pic-holder
+                img(src="assets/img/shipping/card-icon.png")
+            dl.payments_terms-item.payments_terms-item--flex-container
+              dt text
+              dd text
+          .payments_terms-row
+            .payments_terms-item.payments_terms-item--absolute
+              .pic-holder
+                img(src="assets/img/shipping/card-icon.png")
+            dl.payments_terms-item.payments_terms-item--flex-container
+              dt text
+              dd text

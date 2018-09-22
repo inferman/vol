@@ -1,0 +1,42 @@
+.payments_conditions-block {
+  .pic-holder { width: 65px; }
+}
+.payments_terms-row {
+  display: flex;
+  position: relative;
+  margin-bottom: 20px;
+  @include breakpoint(medium) {
+    padding-left: 65px;
+    min-height: 50px;
+  }
+  @include breakpoint(large) {
+  }
+}
+.payments_terms-item {
+  &--absolute {
+
+    @include breakpoint(large) {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  &--flex-container {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    dt,
+    dd {
+      padding: 0 15px;
+    }
+    dt {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+    dd {
+      flex: 0 0 66.667%;
+      max-width: 66.667%;
+    }
+  }
+}
