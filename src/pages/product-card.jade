@@ -2,6 +2,8 @@ extends ../layouts/default.jade
 
 block content
   include ../partials/breadcrumbs
+  include ../partials/product-card/mocky/tab-content-mixin
+  include ../partials/product-card/mocky/tabsData
   +breadcrumbs('Кросовки для бега')
   section.product-card_main-section
     .row
@@ -9,64 +11,29 @@ block content
         h1.section-title.section-title--blue.text-left Кроссовки Mizuno Wave Inspire 13 SS17
     .row.product-card_card-wrapper
       .columns.large-5.small-12
-        .product-card_product-pic
-          .product-card_pic_main
-            img(src="assets/img/main-page/defmain.jpg")
-
+        include ../partials/product-card/blocks/product-img-section
       .product-card_info-column.columns.large-7.small-12
-        ul.product-card_pic_additional
-          -for(var i = 0; i <= 3; i++)
-            li
-              .product-card_pic_thumbnail
-                img(src="assets/img/sizes/defmain.jpg")
-        .product-card_info
-          ul.product-info_flex-list
-            li
-              .product-card_logo-holder
-                img(src="assets/img/main-page/mizuno_logo.png")
-            li
-              dl.product-card_dl
-                dt Артикул:
-                dd V1GA17004
-            li
-              dl.product-card_dl
-                dt Пол:
-                dd Men
-            li
-              dl.product-card_dl
-                dt Размер UK:
-                dd
-                  select
-                    -for(var i = 1; i<=9; i++)
-                      option(value="#{i}") #{i}
-            li
-              .colors-slider_box
-                .label Выбрать цвет:
-                .product-slider
-                  include ../partials/product-card/color-slider
-            li.m0
-              button(type="button").btn.btn--blue Заказать в один клик
-            li
-              .product-card_price-block
-                .label Цена:
-                .price-holder
-                  .current-price 3558 грн
-                  .old-price 4299 грн
-            li
-              .product-card_compare
-                .label Сравнить:
-                a(href="#").product-btn.product-btn--compare
-                  img(src="assets/img/main-page/compare_icon.png").compare-icon
-            li
-              button(type="button").btn.btn--blue.sm Размерная сетка
-            li
-              .product-card_stock
-                .text-center.label Количество:
-                .checkout_stock
-                  button(type="button").checkout_btn.checkout_btn--decrease
-                  input(type="number" min="1")
-                  button(type="button").checkout_btn.checkout_btn--increase
-            li.m0
-              button(type="button").btn.btn--green.product_checkout-btn
-                img(src="assets/img/checkout-icon--white.png")
-                | В корзину
+        include ../partials/product-card/blocks/product-info-section
+    .row
+      .columns.xlarge-9.large-12.small-12.medium-12
+        include ../partials/product-card/blocks/product-tabs-section
+  section.product-card_feedback
+    .row.align-center
+      .columns.small-12
+        h1.section-title.section-title--blue Отзывы
+        .feedbacks-textarea
+          h3 Добавить комментарий:
+          textarea(rows=10)
+          button(type="button").btn.btn--blue Комментировать
+
+  section.product-card_additional-goods
+    .row.align-center
+      .columns.small-12
+        h1.section-title.section-title--blue С этим товаром покупают
+        include ../partials/main-page/products/products-slider
+
+  section.product-card_additional-goods
+    .row.align-center
+      .columns.small-12
+        h1.section-title.section-title--blue Ранее просмотренные товары
+        include ../partials/main-page/products/products-slider

@@ -1,0 +1,30 @@
+.product-card_tabs-box {
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &:before,
+    &:after { content: none; }
+    @include breakpoint(large) {
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+    }
+  }
+  .tabs-title {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+    > a {
+      min-width: 192px;
+      padding: 12px 24px;
+      text-align: center;
+    }
+    @include breakpoint(medium only) {
+      flex: 0 0 calc(50% - 10px);
+      max-width: 50%;
+    }
+    @include breakpoint(large) {
+      flex: 0 0 auto;
+    }
+  }
+}

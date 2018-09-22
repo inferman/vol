@@ -1,0 +1,20 @@
+.product-card_tabs-box
+  ul.tabs#product-card-tabs(data-tabs)
+    each tab, index in tabData
+      li.tabs-title(
+        class=`${index === 0 ? 'is-active' : ''}`,
+      )
+        a(
+          aria-selected=`${index1 === 0 ? 'true' : 'false'}`
+          data-tabs-target=`${tab.ref}`
+          href=`#${tab.ref}`
+        ) #{tab.title}
+
+
+  .tabs-content(data-tabs-content="product-card-tabs")
+    each item, index1 in tabData
+      div.tabs-panel(
+        id=`${item.ref}`,
+        class=`${index1 === 0 ? 'is-active' : ''}`
+      )
+        +tabContent(index1)

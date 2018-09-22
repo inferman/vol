@@ -1,0 +1,56 @@
+ul.product-card_pic_additional
+  -for(var i = 0; i <= 3; i++)
+    li
+      .product-card_pic_thumbnail
+        img(src="assets/img/sizes/defmain.jpg")
+.product-card_info
+  ul.product-info_flex-list
+    li
+      .product-card_logo-holder
+        img(src="assets/img/main-page/mizuno_logo.png")
+    li
+      dl.product-card_dl
+        dt Артикул:
+        dd V1GA17004
+    li
+      dl.product-card_dl
+        dt Пол:
+        dd Men
+    li
+      dl.product-card_dl
+        dt Размер UK:
+        dd
+          select
+            -for(var i = 1; i<=9; i++)
+              option(value="#{i}") #{i}
+    li
+      .colors-slider_box
+        .label Выбрать цвет:
+        .product-slider
+          include ../../../partials/product-card/blocks/color-slider
+    li.m0
+      button(type="button").btn.btn--blue Заказать в один клик
+    li
+      .product-card_price-block
+        .label Цена:
+        .price-holder
+          .current-price 3558 грн
+          .old-price 4299 грн
+    li
+      .product-card_compare
+        .label Сравнить:
+        a(href="#").product-btn.product-btn--compare
+          img(src="assets/img/main-page/compare_icon.png").compare-icon
+    li
+      button(type="button").btn.btn--blue.sm Размерная сетка
+    li
+      .product-card_stock
+        .text-center.label Количество:
+        .checkout_stock
+          button(type="button").checkout_btn.checkout_btn--decrease
+          input(type="number" min="1")
+          button(type="button").checkout_btn.checkout_btn--increase
+    li.m0
+      button(type="button").btn.btn--green.product_checkout-btn
+        img(src="assets/img/checkout-icon--white.png")
+        | В корзину

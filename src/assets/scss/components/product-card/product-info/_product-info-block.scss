@@ -1,0 +1,219 @@
+.product-card_card-wrapper {
+  position: relative;
+  padding-top: 100px;
+  margin-bottom: 40px;
+  ul {
+    list-style-type: none;
+    margin: 0;
+  }
+  @include breakpoint(large) {
+    max-height: 470px;
+    padding: 0;
+  }
+}
+
+.product-card_product-pic {
+  border: 1px solid $blue;
+  img { max-height: 100%; }
+  @include breakpoint(large) {
+    display: flex;
+    padding-bottom: 90px;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.product-card_pic_main {
+  flex: 0 0 100%;
+  text-align: center;
+}
+.product-card_pic_additional {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 7px 0 0;
+  margin: 0 -4px;
+  max-width: 100%;
+  justify-content: center;
+  > li {
+    display: inline-block;
+    padding: 0 4px;
+    margin-bottom: 8px;
+    flex: 0 0 80px;
+    max-width: 80px;
+  }
+
+  @include breakpoint(large) {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 7px 4px 0;
+    margin: 0;
+    max-height: 90px;
+    overflow: hidden;
+    position: absolute;
+    left: 15px;
+    bottom: 0;
+    width: calc(41.66667% - 30px);
+    > li {
+      width: 20%;
+    }
+  }
+}
+.product-card_pic_thumbnail {
+  border: 1px solid $border-color;
+  padding: 50%;
+  position: relative;
+  overflow: hidden;
+  img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.product-card_info-column { background: $light-gray; }
+
+.product-card_info {
+  padding: 16px 10px;
+  display: flex;
+  flex-direction: column;
+  @include breakpoint(large) {
+    display: block;
+    height: 100%;
+  }
+}
+
+.product-info_flex-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  li {
+    padding: 0 10px;
+    margin-bottom: 20px;
+  }
+  @include breakpoint(medium) {
+    flex-wrap: wrap;
+    max-height: 450px;
+    li {
+      padding: 0 10px;
+      width: 50%;
+      &:nth-child(7) { margin: 0; }
+      &:not(.m0) { margin-bottom: 20px; }
+    }
+  }
+
+  @include breakpoint(medium down) {
+    li {
+      &:nth-child(9) { order: 10; }
+      &:nth-child(11) { order: 11; }
+    }
+  }
+  @include breakpoint(large) {
+    max-height: 100%;
+  }
+  .btn {
+    width: 100%;
+    &.sm { font-size: 1rem; }
+  }
+}
+
+
+
+.product-card_logo-holder {
+  height: 70px;
+  img { max-height: 100%; }
+}
+
+.product-card_dl {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  dt {
+    font-weight: $global-weight-normal;
+    line-height: 1.3;
+    margin: 0;
+    width: 125px;
+  }
+  select {
+    border-color: $green;
+    font-size: 1rem;
+    padding: 8px;
+    min-width: 100px;
+    text-align: center;
+  }
+}
+
+.colors-slider_box {
+  .label { margin-bottom: 15px; }
+}
+
+.product-card_price-block {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  line-height: 1;
+  > .label { margin-right: 30px; }
+  .price-holder {
+    color: #ea4556;
+    font-size: rem-calc(36);
+    position: relative;
+    min-width: 150px;
+  }
+  .current-price:not(:last-child) { padding-bottom: 40px; }
+  .old-price {
+    color: $green;
+    font-size: rem-calc(24);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    text-decoration: line-through;
+    width: 100%;
+  }
+  @include breakpoint(medium down) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 10px;
+    width: 100%;
+  }
+}
+
+.product-card_compare {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > .label { margin-right: 30px; }
+}
+
+.product-card_stock {
+  .label {
+    line-height: 1;
+    margin-bottom: 30px;
+  }
+}
+
+.product_checkout-btn {
+  position: relative;
+  img {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.my-slider_product-colors {
+  padding: 0 rem-calc(20);
+  .slick-arrow,
+  .slider_arrow-img {
+    @include sizes($width: 9px, $height: 17px);
+  }
+  .my-sliders_slide { padding: 0 rem-calc(5) }
+  @include breakpoint(medium down) {
+    .slick-arrow { display: inline-block !important; }
+  }
+}
