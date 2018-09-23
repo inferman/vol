@@ -1,0 +1,38 @@
+.guarantee_wrapper,
+.guarantee_terms { margin-bottom: 30px; }
+
+.guarantee_wrapper {
+  .section-title {
+    margin-bottom: 25px;
+    & + h3 {
+      color: $green;
+      font-weight: 600;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  }
+}
+.chargeback-conditions_list {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.chargeback-conditions_item {
+  @include breakpoint(small only) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    .icon-holder {
+      margin-right: 15px;
+      flex: 0 0 70px;
+      max-width: 70px;
+    }
+  }
+  @include breakpoint(medium) {
+    text-align: center;
+    .icon-holder { margin-bottom: 15px; }
+  }
+}
+
+.guarantee_terms {
+  .section-title { margin-bottom: 30px; }
+}

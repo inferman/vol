@@ -1,0 +1,47 @@
+extends ../layouts/default.jade
+
+block content
+  include ../partials/breadcrumbs
+  +breadcrumbs('Гарантия')
+  section.guarantee_wrapper
+    .row.align-center
+      .column.small-12
+        h1.section-title.section-title--blue Гарантия
+        h3.green 100% гарантия возврата!
+    .row.content-part
+      .columns.small-12
+        p Для того чтобы Вы были уверены в том, что выбранные товары являются оригинальными и качественными, мы гарантируем Вам возможность получить свои деньги обратно или заменить приобретенный товар на другой.
+        p Вы ничем не рискуете! Мы гарантируем возврат по любой причине!
+      .columns.small-12
+        .row.align-center.chargeback-conditions_wrapper
+          .columns.small-12
+            p Причиной возврата могут являться:
+          .columns.small-12.large-10.chargeback-conditions_list
+            .row.align-justify.align-top
+              .column.small-12.medium-3.chargeback-conditions_item
+                .icon-holder
+                  img(src="assets/img/shipping/disclaimer.png")
+                p Несоответствие товара параметрам заказа
+              .column.small-12.medium-3.chargeback-conditions_item
+                .icon-holder
+                  img(src="assets/img/shipping/zoom-glass.png")
+                p Обнаружение видимых дефектов при первичном осмотре
+              .column.small-12.medium-3.chargeback-conditions_item
+                .icon-holder
+                  img(src="assets/img/shipping/revert.png")
+                p Возврат без причины&nbsp;<span class="asterisk">*</span>
+          .columns.small-12
+            p Все нюансы по возврату&nbsp;<span class="asterisk">*</span> и доставке нового товара согласовуются отдельно, для чего необходимо обратиться к менеджеру нашего магазина любым, удобным Вам способом, указанным в
+              | &nbsp;
+              a(href="/contacts.html") Контактах.
+            p <span class="asterisk">*</span>&nbsp;Вы имеете право в течение 14 дней с момента получения товара отказаться от него по любым причинам, согласно  «Закону о защите прав потребителей» (см. Гарантийные условия ниже).<br>При возврате/обмене товара стоимость  транспортных расходов оплачивается Покупателем. Надеемся на Ваше понимание.
+
+  section.guarantee_terms
+    .row.align-center
+      .column.small-12
+        h2.section-title.section-title--blue Гарантийные условия
+        ol
+          li Товарно-транспортная накладная является гарантийным талоном.
+          li После получения товара на складе транспортной компании ОБЯЗАТЕЛЬНО проверяйте комплектацию вашего заказа (соответствие заказанной модели с получаемой, размерные характеристики и т.п.).<br>Все претензии по комплектации заказа принимаются сразу после получения посылки.
+          li Гарантия распространяется на заводской брак выявленный  во время получения товара на филиале транспортной компании, либо при первичной эксплуатации.
+          li Вернуть и/или поменять товар, купленный в онлайн магазине VolleyMAG, можно в течение 14 дней с момента получения товара на складе транспортной компании или у курьера.<br> Товар не должен иметь механических повреждений и не должен носить следы эксплуатации.<br> При возврате товара по любой из вышеперечисленных причин, транспортные расходы оплачивает покупатель.
