@@ -1,42 +1,78 @@
-.payments_conditions-block {
-  .pic-holder { width: 65px; }
+.payments_wrapper,
+.shipping_wrapper {
+  margin-bottom: 40px;
 }
+
+.payments_conditions-block {
+  margin: 30px 0;
+  .pic-holder {
+    text-align: center;
+    img { width: 65px; }
+  }
+}
+
 .payments_terms-row {
   display: flex;
-  position: relative;
-  margin-bottom: 20px;
-  @include breakpoint(medium) {
-    padding-left: 65px;
-    min-height: 50px;
+  flex-wrap: wrap;
+  &.payments--alignment {
+    align-items: flex-start;
   }
   @include breakpoint(large) {
+    &.payments--alignment {
+      align-items: center;
+    }
   }
 }
-.payments_terms-item {
-  &--absolute {
 
-    @include breakpoint(large) {
-      position: absolute;
-      left: 0;
-      top: 0;
+.payments_terms-item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  &--shrink { flex: 0 0 100%; }
+  @include breakpoint(medium) {
+    flex: 1 1 0%;
+    &--shrink { flex: 0 0 auto; }
+  }
+}
+
+.payments_description {
+  margin: 0;
+  padding: 0;
+  dt,
+  dd {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  dt { font-weight: 600; }
+  @include breakpoint(medium) {
+    dt,
+    dd { padding: 0 15px;}
+  }
+  @include breakpoint(large) {
+    dt {
+      flex: 0 0 40%;
+      max-width: 40%;
+    }
+    dd {
+      flex: 0 0 60%;
+      max-width: 60%;
     }
   }
-  &--flex-container {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    dt,
-    dd {
-      padding: 0 15px;
-    }
-    dt {
-      flex: 0 0 33.333%;
-      max-width: 33.333%;
-    }
-    dd {
-      flex: 0 0 66.667%;
-      max-width: 66.667%;
-    }
+}
+
+
+.shipping_conditions-block {
+  margin: {
+    top: 30px;
+    bottom: 30px;
+  };
+  .pic-holder {
+    text-align: center;
+    img { width: 65px; }
+  }
+  .shipping_item {
+    margin-bottom: 15px;
+    @include breakpoint(medium) { align-items: center; }
+    p { margin: 0; }
   }
 }

@@ -4,28 +4,48 @@ block content
   include ../partials/breadcrumbs
   include ../partials/shipping/mocky/mockyData
   +breadcrumbs('Оплата и доставка')
-  section.payments_wtapper
+  section.payments_wrapper
     .row.align-center
       .column.small-12
         h1.section-title.section-title--blue Оплата
     .row
-      .small-12
+      .columns.small-12
         p Оформляя заказ в нашем магазине Вы имеете возможность выбрать любую, удобную Вам форму оплаты:
 
     .row
-      .small-12.large-10
+      .columns.small-12.large-10
         .payments_conditions-block
-          .payments_terms-row
-            .payments_terms-item.payments_terms-item--absolute
-              .pic-holder
-                img(src="assets/img/shipping/card-icon.png")
-            dl.payments_terms-item.payments_terms-item--flex-container
-              dt text
-              dd text
-          .payments_terms-row
-            .payments_terms-item.payments_terms-item--absolute
-              .pic-holder
-                img(src="assets/img/shipping/card-icon.png")
-            dl.payments_terms-item.payments_terms-item--flex-container
-              dt text
-              dd text
+          each item in paymentsTerms
+            .payments_terms-row.payments--alignment
+              .payments_terms-item.payments_terms-item--shrink
+                .pic-holder
+                  img(src=`assets/img/shipping/${item.icon}`)
+
+              .payments_terms-item
+                dl.payments_description.payments_terms-row
+                  dt #{item.term}
+                  dd #{item.description}
+
+        p.bold-italic Внимание!  Наложеным платежом отправляются заказы на общую сумму более 400 грн!
+
+  section.shipping_wrapper
+    .row.align-center
+      .column.small-12
+        h1.section-title.section-title--blue Доставка
+
+    .row
+      .columns.small-12
+        p Наши сотрудники отправят Ваш заказ транспортной компанией «Новая почта», представленной более 1300-ю отделениями по всей Украине, а это значит:
+
+    .row.align-justify.align-middle.shipping_conditions-block
+      each term in shippingTerms
+        .columns.small-12.medium-5
+          article.row.shipping_item
+            .column.shrink.pic-holder
+              img(src=`assets/img/shipping/${term.icon}`)
+            .column.text-holder
+              p !{term.text}
+
+    .row
+      .columns.small-12
+        p.bold Доставка Вашего заказа происходит в течении 1-2-х дней с момента  полной предоплаты заказа или подтверждения  заказа (если оплата наличными при получении).

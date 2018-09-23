@@ -225,3 +225,10 @@ input[type=number]::-webkit-outer-spin-button {
 .tabs-title {
   margin-right: 10px;
 }
+.bold {
+  font-weight: 600;
+  &-italic {
+    font-weight: 600;
+    font-style: italic;
+  }
+}
