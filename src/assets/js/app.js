@@ -159,32 +159,26 @@ const productColorsSlider = {
 
 })(jQuery);
 
-(function() {
-  const popupCloseBtn = document.querySelector('.closeCallPopup');
-  const callbackBtns = document.querySelectorAll('.callback-btn');
-  const popupElem = document.querySelector('.callbackPopupWrapper');
-
-  function togglePopup() {
-    popupElem.classList.toggle('hide');
-  }
-  callbackBtns.forEach((item) => {
-    item.addEventListener('click', togglePopup);
-  });
-  popupCloseBtn.addEventListener('click', togglePopup);
-
-})();
-
 (function () {
-  const popupCloseBtn = document.querySelector('.closeFeedback');
-  const feedbackPopup = document.querySelector('.feedbackPopupWrapper');
-  const feedbackBtn = document.querySelector('.feedBack');
-  if(!feedbackPopup) return;
+  function AddListeners(openBtn, closeBtn, popupElement) {
+    const openBtnRef = document.querySelectorAll(`.${openBtn}`);
+    const closeBtnRef = document.querySelector(`.${closeBtn}`);
+    const popupElementRef = document.querySelector(`.${popupElement}`);
 
-  function togglePopup() {
-    feedbackPopup.classList.toggle('hide');
+    if(!popupElementRef || !openBtnRef) return;
+
+    openBtnRef.forEach((item) => {
+        item.addEventListener('click', toggler);
+    });
+
+    closeBtnRef.addEventListener('click', toggler);
+
+    function toggler() {
+        popupElementRef.classList.toggle('hide');
+    }
   }
 
-  feedbackBtn.addEventListener('click', togglePopup);
-  popupCloseBtn.addEventListener('click', togglePopup);
-})();
+  const callbackPopup = new AddListeners('callback-btn', 'closeCallPopup', 'callbackPopupWrapper');
+  const feedbackPopup = new AddListeners('feedBack', 'closeFeedback', 'feedbackPopupWrapper');
 
+})();
