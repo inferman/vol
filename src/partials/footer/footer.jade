@@ -1,5 +1,7 @@
 footer.main-footer
-  include mocky/mockyData
+  include ../popup
+  include ./mocky/popup-config
+  include ./mocky/mockyData
   section.footer_main-section
     .row.align-middle
       .column.large-3.medium-6.small-12
@@ -35,7 +37,7 @@ footer.main-footer
           img(src="assets/img/footer/mobile_icon.png")
           a(href="tel:0979485039") 097 948 50 39
           a(href="tel:0999238189") 099 923 81 89
-        button(type="button").btn.btn--green
+        button(type="button").callback-btn.btn.btn--green
           | Обратный звонок
         .flex-holder
           a(href="mailto:zakaz@volleymag.com.ua").footer_email
@@ -53,6 +55,10 @@ footer.main-footer
             li
               a(href="#{soc.link}")
                 img(src="assets/img/footer/#{soc.icon}.png")
+
+  //- popup block
+  .callbackPopupWrapper.hide
+    +popup(callEmBack)
 
 
 

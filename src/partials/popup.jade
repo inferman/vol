@@ -1,0 +1,16 @@
+mixin popup(data)
+  .popup_overlay
+    .popup_box
+      button(type="button", class=`${data.additionalClass} || ''`).popup_close-btn
+      .popup_header
+        h3 #{data.title}
+        if(data.disclaimer)
+          p #{data.disclaimer}
+      .popup_body
+        form
+          each field in data.fields
+            if(field.type !== 'textarea')
+              input(type=`${field.type}`, placeholder=`${field.placeholder}`, required)
+            else
+              textarea(rows=`${field.rows}`, placeholder=`${field.placeholder}`)
+          button(type="sumbit").popup_submit-button.btn.btn--blue Отправить

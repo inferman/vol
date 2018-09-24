@@ -3,6 +3,8 @@ extends ../layouts/default.jade
 block content
   include ../partials/news/mocky/mockyData
   include ../partials/breadcrumbs
+  include ../partials/contacts/mocky/popup-config
+  include ../partials/popup
   +breadcrumbs('Контакты')
   .row.contacts-wrapper
     .column.small-12
@@ -40,4 +42,8 @@ block content
 
       p Для предложений сотрудничества, рекламы, а также по любым спорным вопросам Вы можете написать руководству магазина. <br> Предложения по улучшению нашего сервиса будут приняты с благодарностью.
       .contacts_mailing-holder.text-center
-        button(type="button").btn.btn--blue Написать руководству
+        button(type="button").feedBack.btn.btn--blue Написать руководству
+
+  //- popup block
+  .feedbackPopupWrapper.hide
+    +popup(feedBack)

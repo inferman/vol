@@ -155,6 +155,36 @@ const productColorsSlider = {
         $(document)
             .on("mousemove", setText)
             .one("mouseup", () => $(document).off("mousemove", setText))
-    )
+    );
 
 })(jQuery);
+
+(function() {
+  const popupCloseBtn = document.querySelector('.closeCallPopup');
+  const callbackBtns = document.querySelectorAll('.callback-btn');
+  const popupElem = document.querySelector('.callbackPopupWrapper');
+
+  function togglePopup() {
+    popupElem.classList.toggle('hide');
+  }
+  callbackBtns.forEach((item) => {
+    item.addEventListener('click', togglePopup);
+  });
+  popupCloseBtn.addEventListener('click', togglePopup);
+
+})();
+
+(function () {
+  const popupCloseBtn = document.querySelector('.closeFeedback');
+  const feedbackPopup = document.querySelector('.feedbackPopupWrapper');
+  const feedbackBtn = document.querySelector('.feedBack');
+  if(!feedbackPopup) return;
+
+  function togglePopup() {
+    feedbackPopup.classList.toggle('hide');
+  }
+
+  feedbackBtn.addEventListener('click', togglePopup);
+  popupCloseBtn.addEventListener('click', togglePopup);
+})();
+
