@@ -1,0 +1,8 @@
+mixin profile-tab-content(id)
+  case id
+    when 0
+      include ./../orders-section
+    when 1
+      include ./../user-settings
+    when 2
+      include ./../password-settings

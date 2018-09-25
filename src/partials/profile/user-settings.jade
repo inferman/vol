@@ -1,0 +1,7 @@
+form
+  .row.small-up-1
+    each field in userData
+      .input-holder.column
+        input(type="text", placeholder=`${field}`)
+    .column
+      button(type="submit").btn.btn--green Сохранить

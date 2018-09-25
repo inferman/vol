@@ -1,0 +1,17 @@
+.profile_tabs-container
+  ul.tabs#profile-tabs(data-tabs)
+    each tab, index in tabData
+      li.tabs-title( class=`${index === 0 ? 'is-active' : ''}` )
+        a(
+          aria-selected=`${index === 0 ? 'true' : 'false'}`
+          data-tabs-target=`${tab.ref}`
+          href=`#${tab.ref}`
+        ) #{tab.title}
+
+  .tabs-content(data-tabs-content="profile-tabs")
+    each item, tabIndex in tabData
+      div.tabs-panel(
+        id=`${item.ref}`,
+        class=`${tabIndex === 0 ? 'is-active' : ''}`
+      )
+        +profile-tab-content(tabIndex)

@@ -1,0 +1,78 @@
+#profile-tabs {
+ display: flex;
+  flex-wrap: wrap;
+ .tabs-title {
+   flex: 0 0 100%;
+   margin: 0 0 15px;
+   text-align: center;
+   @include breakpoint(medium) {
+     flex: 1 1 auto;
+     margin: 0;
+     &:not(:last-child) { padding-right: 10px; }
+   }
+ }
+}
+
+.profile_tabs-container {
+  input {
+    padding: 16px;
+    margin-bottom: 22px;
+    width: 100%;
+    transition: border-color ease .2s;
+    &:focus { border-color: $green; }
+  }
+}
+
+.profile_orders-box {
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  &:not(:last-child) { border-bottom: 1px solid $border-color; }
+  dl {
+    display: flex;
+    margin: 0;
+  }
+  dt,
+  dd { margin: 0; }
+  dt { margin-right: 8px; }
+}
+
+.profile_order_body {
+  .order-details {
+    dl { margin-bottom: 5px; }
+    dt { margin-right: 10px; }
+  }
+}
+
+.order_details-container {
+  background: $light-gray;
+  padding: {
+    top: 15px;
+    bottom: 15px;
+  };
+  margin: {
+    top: 10px;
+    bottom: 10px;
+  };
+  @include breakpoint(medium) {
+    justify-content: space-between;
+  }
+  .order-details {
+    @include breakpoint(small only) {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      flex: 0 0 100%;
+      max-width: 100%;
+      align-content: space-between;
+      margin-top: 15px;
+      max-height: 85px;
+      > dl {
+        flex: 0 0 auto;
+        max-width: 50%;
+      }
+    }
+  }
+  .pic-holder {
+    border: 1px solid $border-color;
+  }
+}

@@ -1,0 +1,17 @@
+extends ../layouts/default.jade
+
+block content
+  include ../partials/profile/mocky/mockyData
+  include ../partials/profile/mocky/tab-content-mixin
+  include ../partials/breadcrumbs
+  +breadcrumbs('Личный кабинет')
+  section
+    .row
+      .column.small-12
+        h1.section-title.section-title--blue Личный кабинет
+  section.profile-tabs
+    .row.align-center
+      .columns.small-12.large-8
+        include ../partials/profile/tabs-section
+
+

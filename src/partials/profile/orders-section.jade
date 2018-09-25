@@ -1,0 +1,32 @@
+-for(let i = 0; i <= 2; i++)
+  .row.profile_orders-box
+    .columns.small-12.profile_order_header
+      .row.align-justify
+        .column.shrink
+          dl.order-number
+            dt № заказа:
+            dd 5671
+        .column.shrink
+          date #{new Date().getDate()} #{monthNames[new Date().getMonth()]} #{new Date().getFullYear()}
+    .columns.small-12.profile_order_body
+      .row.order_details-container.align-middle
+        .columns.small-12.medium-6
+          .row
+            .columns.shrink
+              .pic-holder
+                img(src="assets/img/sizes/defmain.jpg")
+            .columns
+              a(href="#").product-name Кроссовки Mizuno Wave Lightning Z3 SS17
+        .columns.shrink.order-details
+          each item in orderDetails
+            dl
+              dt #{item.name}
+              dd #{item.value}
+    .columns.small-12.profile_order_footer
+      .row.align-middle
+        .columns.small-12.medium-6
+          p Общая сумма к оплате: 1590 грн.
+        .columns.small-12.medium-6
+          dl
+            dt Примечание:
+            dd Не звонить для подтверждения заказа. ТЕСТ
