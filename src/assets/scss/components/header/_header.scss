@@ -1,3 +1,5 @@
+@import 'categories-styles';
+
 .header_menu,
 .header_content {
   flex-wrap: wrap;
@@ -203,6 +205,7 @@
 .header_categories {
   flex: 0 0 100%;
   max-width: 100%;
+  position: relative;
   .btn {
     position: relative;
     min-height: 100%;
@@ -230,6 +233,7 @@
     transform: translateY(-50%);
   }
 }
+
 .header_search {
   @include transition(visibility, opacity);
   display: flex;

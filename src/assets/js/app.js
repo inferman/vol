@@ -180,5 +180,6 @@ const productColorsSlider = {
 
   const callbackPopup = new AddListeners('callback-btn', 'closeCallPopup', 'callbackPopupWrapper');
   const feedbackPopup = new AddListeners('feedBack', 'closeFeedback', 'feedbackPopupWrapper');
+  const categoriesMenu = new AddListeners('categories-btn', 'categories-btn', 'categoriesMenuWrapper');
 
 })();

@@ -1,0 +1,15 @@
+include ./../mocky/mockyData
+ul.vertical.menu.accordion-menu(data-accordion-menu data-multi-open='false')
+  each category in categories
+    li.header_category-item
+      a(href=`${category.link}`).header_collapse-anchor #{category.title}
+        img(src=`assets/img/categories-icons/${category.icon}.png`).header_category-icon
+        img(src=`assets/img/categories-icons/${category.icon}-hover.png`).header_category-icon.header_category-icon--hover
+        if category.innerItems
+          img(src="assets/img/categories-icons/arrow-icon.png").category_collapse-icon
+          img(src="assets/img/categories-icons/arrow-icon-hover.png").category_collapse-icon.category_collapse-icon--hover
+      if category.innerItems
+        ul.menu.vertical.nested.header_subcategory
+          each subcategory in category.innerItems
+            li
+              a(href=`${subcategory.link}`).header_inner-anchor #{subcategory.title}

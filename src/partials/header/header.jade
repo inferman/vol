@@ -25,9 +25,12 @@ header.main-header
             | Обратный звонок
       .header_sec-row
         .header_categories
-          button(type="button").btn.btn--green
+          button(type="button").btn.btn--green.categories-btn
             img(src="assets/img/footer/burger_icon.png").burger-icon
             | Категории
+          .header_categories_menu.categoriesMenuWrapper.hide
+            include ./blocks/categories-menu
+
         .header_search
           input(type="text" placeholder="Я ищу...")
           button(type="submit").search-btn
