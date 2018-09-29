@@ -16,6 +16,11 @@ html
         block content
       block footer
         include ../partials/footer/footer
+
+    //- popup blocks -//
     .signinWrapper.hide
       include ../partials/header/blocks/signin
+
+    .callbackPopupWrapper.hide
+      +popup(callEmBack)
     script(src="assets/js/app.js")
