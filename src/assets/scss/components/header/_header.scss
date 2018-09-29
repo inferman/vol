@@ -32,7 +32,8 @@
     visibility: visible;
     z-index: 10;
   }
-  a {
+  a,
+  .header_login {
     color: $medium-gray;
     font-size: 16px;
     transition: color 0.3s;

@@ -1,0 +1,18 @@
+.popup_overlay
+  .popup_box
+    button(type="button").popup_close-btn.closeSigninBtn
+    .popup_header
+      h3 Авторизация
+    .popup_body
+      form
+        .form-control
+          label Email
+          input(type="email" required)
+        .form-control
+          label Пароль
+          input(type="password" required)
+        .form-control.row.align-justify.collapse
+          .columns.shrink
+            button(type="button").popup_submit-button.btn.btn--blue Войти
+          .columns.shrink
+            button(type="button").popup_submit-button.btn.btn--blue Восстановление пароля
