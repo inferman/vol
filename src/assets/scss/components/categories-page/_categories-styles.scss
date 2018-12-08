@@ -12,11 +12,11 @@
 .categories_sidebar {
   .accordion-item {
     &.is-active {
-      .accordion-title { background: $green; }
+      // .accordion-title { background: $green; }
     }
   }
   .accordion-title {
-    background: $medium-gray;
+    // background: $medium-gray;
     margin-bottom: rem-calc(10);
     &:hover,
     &:focus { color: $white; }

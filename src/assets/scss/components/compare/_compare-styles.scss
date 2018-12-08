@@ -1,4 +1,5 @@
 .compare_wrapper { padding: 50px 0; }
+
 .compare_product_column {
   flex: 0 0 100%;
   max-width: 100%;
@@ -32,6 +33,7 @@
     height: 100%;
   }
 }
+
 .compare_product-info {
   &:not(:last-child) { margin-bottom: 28px; }
   .product-img { margin-bottom: 12px; }
@@ -42,16 +44,19 @@
   }
   p { margin: 0; }
 }
+
 .compare_product-block_title {
   color: $blue;
   font-size: 1rem;
   height: 66px;
   overflow: hidden;
 }
+
 .compare_product_btns {
   .btn {
     width: 100%;
     &:not(:last-child) { margin-bottom: 10px; }
   }
 }
+
 .compare_product-block_colors { flex: 1 1 0%; }
