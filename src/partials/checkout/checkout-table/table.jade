@@ -10,27 +10,27 @@
       h3 Цена
     .checkout_th.columns.small-1.small-offset-1
       h3 Удалить
+-for(var i = 0; i<=1; i++)
+  .checkout_tbody-row
+    .row.collapse
+      .checkout_td.columns.small-1
+        .pic-holder
+          img(src="assets/img/sizes/defmain.jpg")
+      .checkout_td.columns.small-2.small-offset-1
+        p.product-name Кроссовки Mizuno Wave Lightning Z3 SS17
+      .checkout_td.columns.small-2.small-offset-1
+        .checkout_stock
+          button(type="button").checkout_btn.checkout_btn--decrease
+          input(type="number" min="1")
+          button(type="button").checkout_btn.checkout_btn--increase
 
-.checkout_tbody-row
-  .row.collapse
-    .checkout_td.columns.small-1
-      .pic-holder
-        img(src="assets/img/sizes/defmain.jpg")
-    .checkout_td.columns.small-2.small-offset-1
-      p.product-name Кроссовки Mizuno Wave Lightning Z3 SS17
-    .checkout_td.columns.small-2.small-offset-1
-      .checkout_stock
-        button(type="button").checkout_btn.checkout_btn--decrease
-        input(type="number" min="1")
-        button(type="button").checkout_btn.checkout_btn--increase
-
-    .checkout_td.columns.small-1.small-offset-1.align-center
-      span 3557
-      | &nbsp;
-      span грн
-    .checkout_td.columns.small-1.small-offset-1.align-center
-      button(type="button").checkout_btn.checkout_btn--remove
-        img(src="assets/img/close-popup.png", alt="close icon")
+      .checkout_td.columns.small-1.small-offset-1.align-center
+        span 3557
+        | &nbsp;
+        span грн
+      .checkout_td.columns.small-1.small-offset-1.align-center
+        button(type="button").checkout_btn.checkout_btn--remove
+          img(src="assets/img/close-popup.png", alt="close icon")
 
 .checkout_total-amount
   .row.collapse
