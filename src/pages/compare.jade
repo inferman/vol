@@ -4,29 +4,33 @@ block content
   include ../partials/breadcrumbs
   +breadcrumbs('Сравнение')
   .compare_wrapper
-    .row
-      .columns.large-12
+    .row.align-center
+      .columns.small-12.medium-12.large-10
         .row
-          -for(var j = 0; j <= 1; j++)
+          -for(var j = 0; j <= 3; j++)
             .compare_product_column.columns
               article.compare_product-block
-                .compare_product-block_title.compare_product-info(data-legend="adsfasdf")
+                .compare_product-block_title
                   h3 Кроссовки Mizuno Synchro MY 2 W SS17
-                .compare_product-block_picture.compare_product-info(data-legend="adsfasdf")
-                  .product-img
-                    img(src="assets/img/main-page/defmain.jpg")
-                  .product-price
-                    | 3689 грн
-                .compare_product-block_colors.compare_product-info(data-legend="adsfasdf")
+                .inner-model-holder.compare_product-info
+                  .compare_product-block_picture
+                    .product-img
+                      img(src="assets/img/main-page/defmain.jpg")
+                    .product-price.text-center
+                      | 3689 грн
+                  .compare_product_btns
+                    button(type="button").btn.btn--blue Купить
+                    button(type="button").btn.btn--green Очистить
+                .compare_product-block_colors.compare_product-info
                   ul.product-card_pic_additional.compare-mod
-                    -for(var i = 0; i <= 3; i++)
+                    -for(var i = 0; i <= `${j%2 === 0 ? 3 : 1}`; i++)
                       li
                         .product-card_pic_thumbnail
                           img(src="assets/img/sizes/defmain.jpg")
-                .compare_product-block_sizes.compare_product-info(data-legend="adsfasdf")
+                .compare_product-block_sizes.compare_product-info
                   | 8  8.5  9  9.5  10
-                .compare_product-block_gender.compare_product-info(data-legend="adsfasdf")
+                .compare_product-block_gender.compare_product-info
                   | man
-                .compare_product-block_description.compare_product-info(data-legend="adsfasdf")
+                .compare_product-block_description.compare_product-info
                   p Волейбольные кроссовки Mizuno Wave Lightning Z3, V1GA1700-48. Улучши свою игру с кроссовками серии Lightning. Поворачивайся быстрее, будь ловчее
 
