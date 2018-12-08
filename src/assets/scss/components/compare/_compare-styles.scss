@@ -1,0 +1,23 @@
+.compare_product_column {
+  flex: 0 0 22%;
+  max-width: 21%;
+  &:first-child {
+    flex: 0 0 33%;
+    max-width: 33%;
+    .compare_product-info {
+      padding-left: 150px;
+      position: relative;
+      &:before {
+        content: attr(data-legend);
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 14px;
+        color: #000;
+      }
+    }
+  }
+}
+.compare_product-block {
+  padding: 0 15px;
+}

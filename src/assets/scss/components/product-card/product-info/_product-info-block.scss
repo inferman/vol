@@ -31,34 +31,39 @@
 .product-card_pic_additional {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   padding: 7px 0 0;
   margin: 0 -4px;
   max-width: 100%;
-  justify-content: center;
   > li {
     display: inline-block;
+    cursor: pointer;
     padding: 0 4px;
     margin-bottom: 8px;
     flex: 0 0 80px;
     max-width: 80px;
   }
+  &:not(.compare-mod) {
+    align-items: center;
+    justify-content: center;
+  }
 
   @include breakpoint(large) {
-    flex-wrap: nowrap;
     justify-content: flex-start;
     padding: 7px 4px 0;
     margin: 0;
-    max-height: 90px;
-    overflow: hidden;
-    position: absolute;
-    left: 15px;
-    bottom: 0;
-    width: calc(41.66667% - 30px);
-    > li {
-      width: 20%;
+    > li { width: 20%; }
+    &:not(.compare-mod) {
+      flex-wrap: nowrap;
+      overflow: hidden;
+      position: absolute;
+      left: 15px;
+      bottom: 0;
+      max-height: 90px;
+      width: calc(41.66667% - 30px);
+      z-index: 1;
     }
   }
+
 }
 .product-card_pic_thumbnail {
   border: 1px solid $border-color;
