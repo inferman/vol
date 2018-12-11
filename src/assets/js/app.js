@@ -178,9 +178,9 @@ const productColorsSlider = {
     }
   }
 
-  const callbackPopup = new AddListeners('callback-btn', 'closeCallPopup', 'callbackPopupWrapper');
-  const feedbackPopup = new AddListeners('feedBack', 'closeFeedback', 'feedbackPopupWrapper');
-  const categoriesMenu = new AddListeners('categories-btn', 'categories-btn', 'categoriesMenuWrapper');
-  const signin = new AddListeners('signinBtn', 'closeSigninBtn', 'signinWrapper');
+  const callbackPopup = AddListeners('callback-btn', 'closeCallPopup', 'callbackPopupWrapper');
+  const feedbackPopup = AddListeners('feedBack', 'closeFeedback', 'feedbackPopupWrapper');
+  const categoriesMenu = AddListeners('categories-btn', 'categories-btn', 'categoriesMenuWrapper');
+  const signin = AddListeners('signinBtn', 'closeSigninBtn', 'signinWrapper');
 
 })();
